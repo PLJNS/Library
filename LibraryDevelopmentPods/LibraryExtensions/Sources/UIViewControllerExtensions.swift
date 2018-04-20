@@ -8,11 +8,41 @@
 import Foundation
 
 public extension UIViewController {
-    public func presentAlertController(with error: Error) {
-        let alertController = UIAlertController(title: "Error",
-                                                message: error.localizedDescription,
-                                                preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+    public func presentAlertControllerIfError(with error: Error?) {
+        guard let error = error else { return }
+        let alertController = UIAlertController.alertController(withError: error)
         present(alertController, animated: true, completion: nil)
+    }
+
+    public func showLoading(style: UIActivityIndicatorViewStyle = .gray) -> Int {
+        let processId = Int.random
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: style)
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.tag = processId
+        activityIndicatorView.center = view.center
+        activityIndicatorView.alpha = 0
+        activityIndicatorView.startAnimating()
+
+        view.isUserInteractionEnabled = false
+        view.addSubview(activityIndicatorView)
+
+        UIView.animate(withDuration: 0.25) {
+            activityIndicatorView.alpha = 1
+        }
+
+        return processId
+    }
+
+    public func hideLoading(procesId: Int) {
+        view.isUserInteractionEnabled = true
+        if let activityIndicatorView = view.viewWithTag(procesId) {
+            UIView.animate(withDuration: 0.25, animations: {
+                activityIndicatorView.alpha = 0
+            }) { (_) in
+                activityIndicatorView.removeFromSuperview()
+            }
+        }
+
     }
 }

@@ -29,4 +29,14 @@ public extension UITableView {
         }
         return deselectedRow
     }
+
+    public var indexPathsCount: Int {
+        var count = 0
+        for section in 0..<numberOfSections {
+            for _ in 0..<numberOfRows(inSection: section) {
+                count += 1
+            }
+        }
+        return count
+    }
 }

@@ -13,6 +13,26 @@ class BookTests: XCTestCase {
 
     let jsonEncoder = JSONEncoder()
     let jsonDecoder = JSONDecoder()
+
+    func testSingleComparison() {
+        let date = Date()
+        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book2 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        XCTAssertEqual(book1, book2)
+    }
+
+    func testMultipleComparison() {
+        let date = Date()
+        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book2 = Book(author: "7", categories: "8", id: 9, lastCheckedOut: date, lastCheckedOutBy: "10", publisher: "11", title: "12")
+        let books1 = [book1, book2]
+
+        let book3 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book4 = Book(author: "7", categories: "8", id: 9, lastCheckedOut: date, lastCheckedOutBy: "10", publisher: "11", title: "12")
+        let books2 = [book3, book4]
+
+        XCTAssertEqual(books1, books2)
+    }
     
     func testJSONDecodingSingleBook() {
         let dateString = "2018-04-19 17:46:26 GMT"
@@ -40,7 +60,7 @@ class BookTests: XCTestCase {
                 XCTAssertEqual(book.lastCheckedOutBy, nil)
                 XCTAssertEqual(book.publisher, "O'REILLY")
                 XCTAssertEqual(book.title, "Running Lean")
-                XCTAssertEqual(book.url, "/books/1/")
+                XCTAssertEqual(book.url?.absoluteString, "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/1/")
             } catch {
                 XCTFail()
             }
@@ -59,12 +79,11 @@ class BookTests: XCTestCase {
                         lastCheckedOut: expectedDate,
                         lastCheckedOutBy: nil,
                         publisher: "O'REILLY",
-                        title: "Running Lean",
-                        url: "/books/1/")
+                        title: "Running Lean")
         do {
             let data = try jsonEncoder.encode(book)
             let json = String(data: data, encoding: .utf8)
-            let expectation = "{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"}"
+            let expectation = "{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\"}"
             XCTAssertEqual(json, expectation)
         } catch {
             XCTFail()
@@ -108,7 +127,7 @@ class BookTests: XCTestCase {
                     XCTAssertEqual(book.lastCheckedOutBy, nil)
                     XCTAssertEqual(book.publisher, "O'REILLY")
                     XCTAssertEqual(book.title, "Running Lean")
-                    XCTAssertEqual(book.url, "/books/1/")
+                    XCTAssertEqual(book.url?.absoluteString, "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/1/")
                 }
             } catch {
                 XCTFail()
@@ -128,13 +147,12 @@ class BookTests: XCTestCase {
                         lastCheckedOut: expectedDate,
                         lastCheckedOutBy: nil,
                         publisher: "O'REILLY",
-                        title: "Running Lean",
-                        url: "/books/1/")
+                        title: "Running Lean")
         let books = [book, book]
         do {
             let data = try jsonEncoder.encode(books)
             let json = String(data: data, encoding: .utf8)
-            let expectation = "[{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"},{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"}]"
+            let expectation = "[{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\"},{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\"}]"
             XCTAssertEqual(json, expectation)
         } catch {
             XCTFail()

@@ -8,7 +8,19 @@
 import Foundation
 import LibraryExtensions
 
-public struct Book: Codable {
+public protocol BookProtocol {
+    var author: String? { get }
+    var categories: String? { get }
+    var id: Int? { get }
+    var lastCheckedOut: Date? { get }
+    var lastCheckedOutBy: String? { get }
+    var publisher: String? { get }
+    var title: String? { get }
+    var url: URL? { get }
+    var lastCheckedOutString: String? { get }
+}
+
+public struct Book: BookProtocol, Codable {
     public var author: String?
     public var categories: String?
     public var id: Int?
@@ -16,7 +28,15 @@ public struct Book: Codable {
     public var lastCheckedOutBy: String?
     public var publisher: String?
     public var title: String?
-    public var url: String?
+    public var url: URL?
+
+    public var lastCheckedOutString: String? {
+        if let lastCheckedOut = lastCheckedOut, let lastCheckedOutBy = lastCheckedOutBy {
+            return "\(lastCheckedOutBy) @ \(DateFormatter.displayDateFormatter.string(from: lastCheckedOut))"
+        }
+
+        return nil
+    }
 
     enum CodingKeys: String, CodingKey {
         case author
@@ -40,7 +60,11 @@ public struct Book: Codable {
         lastCheckedOutBy = try? container.decode(String.self, forKey: .lastCheckedOutBy)
         publisher = try? container.decode(String.self, forKey: .publisher)
         title = try? container.decode(String.self, forKey: .title)
-        url = try? container.decode(String.self, forKey: .url)
+        if let path = try? container.decode(String.self, forKey: .url) {
+            url = LibraryClient.buildURL(withPath: path)
+        } else if let id = id {
+            url = LibraryClient.buildURL(withPath: "/books/\(id)")
+        }
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -53,6 +77,7 @@ public struct Book: Codable {
         }
         if let id = id {
             try? container.encode(id, forKey: .id)
+            try? container.encode("/books/\(id)", forKey: .url)
         }
         if let lastCheckedOut = lastCheckedOut {
             let dateString = DateFormatter.libraryDateFormatter.string(from: lastCheckedOut)
@@ -67,9 +92,6 @@ public struct Book: Codable {
         if let title = title {
             try? container.encode(title, forKey: .title)
         }
-        if let url = url {
-            try? container.encode(url, forKey: .url)
-        }
     }
 
     public init(author: String?,
@@ -78,8 +100,7 @@ public struct Book: Codable {
                 lastCheckedOut: Date?,
                 lastCheckedOutBy: String?,
                 publisher: String?,
-                title: String?,
-                url: String?) {
+                title: String?) {
         self.author = author
         self.categories = categories
         self.id = id
@@ -87,7 +108,47 @@ public struct Book: Codable {
         self.lastCheckedOutBy = lastCheckedOutBy
         self.publisher = publisher
         self.title = title
-        self.url = url
+        self.url = LibraryClient.buildURL(withPath: "/books/\(id ?? 0)")
+    }
+}
+
+extension Book : Equatable {
+    public static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.author == rhs.author &&
+        lhs.categories == rhs.categories &&
+        lhs.id == rhs.id &&
+        lhs.lastCheckedOut == rhs.lastCheckedOut &&
+        lhs.lastCheckedOutBy == rhs.lastCheckedOutBy &&
+        lhs.publisher == rhs.publisher &&
+        lhs.title == rhs.title &&
+        lhs.url == rhs.url
+    }
+}
+
+extension Book: CustomStringConvertible { }
+extension BookProtocol where Self: CustomStringConvertible {
+    public var description: String {
+        return [author, title, publisher, categories].compactMap{ $0 }.joined(separator: ", ")
+    }
+}
+
+extension Collection where Element == BookProtocol {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        let lhsIds = lhs.compactMap({ $0.id })
+        let rhsIds = rhs.compactMap({ $0.id })
+        return lhsIds == rhsIds
+    }
+}
+
+extension BookProtocol {
+    static func randomBook() -> Book {
+        return Book(author: String.randomString(ofLength: 7),
+                    categories: String.randomString(ofLength: 7),
+                    id: nil,
+                    lastCheckedOut: Date(),
+                    lastCheckedOutBy: String.randomString(ofLength: 7),
+                    publisher: String.randomString(ofLength: 7),
+                    title: String.randomString(ofLength: 7))
     }
 }
 

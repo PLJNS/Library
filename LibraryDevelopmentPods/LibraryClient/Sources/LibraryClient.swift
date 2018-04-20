@@ -32,17 +32,17 @@ public struct LibraryClient {
         var url: URL? {
             switch self {
             case .getAll, .add(_):
-                return URL(scheme: scheme, host: host, path: "/\(id)/books")
+                return buildURL(withPath: "/books")
             case .get(let bookId):
-                return URL(scheme: scheme, host: host, path: "/\(id)/books/\(bookId)")
+                return buildURL(withPath: "/books/\(bookId)")
             case .update(let book), .delete(let book):
                 if let bookId = book.id {
-                    return URL(scheme: scheme, host: host, path: "/\(id)/books/\(bookId)")
+                    return buildURL(withPath: "/books/\(bookId)")
                 } else {
                     return nil
                 }
             case .deleteAll:
-                return URL(scheme: scheme, host: host, path: "/\(id)/books/")
+                return buildURL(withPath: "/books/")
             }
         }
 
@@ -58,6 +58,12 @@ public struct LibraryClient {
                 return .delete
             }
         }
+    }
+
+    internal static func buildURL(withPath path: String) -> URL? {
+        return URL(scheme: LibraryClient.scheme,
+                   host: LibraryClient.host,
+                   path: "/\(LibraryClient.id)\(path)")
     }
 
     @discardableResult func load<T : Codable>(_ path: Path, completionHandler: @escaping (_ response: T?, _ error: Error?) -> Void) -> URLSessionDataTask? {

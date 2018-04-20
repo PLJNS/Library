@@ -18,8 +18,7 @@ class LibraryClientTests: XCTestCase {
                     lastCheckedOut: nil,
                     lastCheckedOutBy: nil,
                     publisher: nil,
-                    title: nil,
-                    url: nil)
+                    title: nil)
 
     func testGetAllBooksURL() {
         let path = LibraryClient.Path.getAll

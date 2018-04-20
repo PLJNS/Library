@@ -11,6 +11,11 @@
 		2053F0E1C2203A64E354E4314CF002B5 /* Pods-LibraryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB74A097E617BCD13EFBE50EA21F2CF /* Pods-LibraryTests-dummy.m */; };
 		270308C920883FA300828DFC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270308C820883FA300828DFC /* HTTPMethod.swift */; };
 		2732B80720895DF3009576E3 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80620895DF3009576E3 /* UITableViewExtensions.swift */; };
+		2732B8092089AA1E009576E3 /* UISplitViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B8082089AA1E009576E3 /* UISplitViewControllerExtensions.swift */; };
+		2732B80B2089AA5D009576E3 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80A2089AA5D009576E3 /* CollectionExtensions.swift */; };
+		2732B813208A64EC009576E3 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B812208A64EC009576E3 /* UIAlertControllerExtensions.swift */; };
+		2732B815208A73B4009576E3 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B814208A73B4009576E3 /* IntExtensions.swift */; };
+		2732B817208A75CA009576E3 /* UInt32Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B816208A75CA009576E3 /* UInt32Extensions.swift */; };
 		27B47CEF20890E3300787334 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CED20890E2C00787334 /* DateFormatterExtension.swift */; };
 		27B47CF9208935E400787334 /* LibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF8208935E400787334 /* LibraryService.swift */; };
 		27B47CFC20893BC600787334 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CFA20893BC100787334 /* UIViewControllerExtensions.swift */; };
@@ -76,6 +81,11 @@
 		1F7557A3100292A89636E1F053A71D7C /* Pods-Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Library.modulemap"; sourceTree = "<group>"; };
 		270308C820883FA300828DFC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Sources/HTTPMethod.swift; sourceTree = "<group>"; };
 		2732B80620895DF3009576E3 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Sources/UITableViewExtensions.swift; sourceTree = "<group>"; };
+		2732B8082089AA1E009576E3 /* UISplitViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UISplitViewControllerExtensions.swift; path = Sources/UISplitViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2732B80A2089AA5D009576E3 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = Sources/CollectionExtensions.swift; sourceTree = "<group>"; };
+		2732B812208A64EC009576E3 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtensions.swift; path = Sources/UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		2732B814208A73B4009576E3 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/IntExtensions.swift; sourceTree = "<group>"; };
+		2732B816208A75CA009576E3 /* UInt32Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UInt32Extensions.swift; path = Sources/UInt32Extensions.swift; sourceTree = "<group>"; };
 		27B47CED20890E2C00787334 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatterExtension.swift; path = Sources/DateFormatterExtension.swift; sourceTree = "<group>"; };
 		27B47CF8208935E400787334 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LibraryService.swift; path = Sources/LibraryService.swift; sourceTree = "<group>"; };
 		27B47CFA20893BC100787334 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -194,11 +204,16 @@
 				90CE9EF93FE880B194443834AAD57EE6 /* URLExtensions.swift */,
 				6438D77C6EAAC1E5B210276358B37876 /* URLRequestExtensions.swift */,
 				2732B80620895DF3009576E3 /* UITableViewExtensions.swift */,
+				2732B8082089AA1E009576E3 /* UISplitViewControllerExtensions.swift */,
+				2732B80A2089AA5D009576E3 /* CollectionExtensions.swift */,
+				2732B814208A73B4009576E3 /* IntExtensions.swift */,
+				2732B816208A75CA009576E3 /* UInt32Extensions.swift */,
+				27B47CFD2089445D00787334 /* StringExtensions.swift */,
+				2732B812208A64EC009576E3 /* UIAlertControllerExtensions.swift */,
 				27B47CFA20893BC100787334 /* UIViewControllerExtensions.swift */,
 				27B47CED20890E2C00787334 /* DateFormatterExtension.swift */,
 				604CBEDE3DF7F50E0C9D46AE1C30D9B8 /* Pod */,
 				006D16F515AA204C70AB3694495413E0 /* Support Files */,
-				27B47CFD2089445D00787334 /* StringExtensions.swift */,
 			);
 			name = LibraryExtensions;
 			path = ../LibraryDevelopmentPods/LibraryExtensions;
@@ -478,10 +493,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B47CFE2089445D00787334 /* StringExtensions.swift in Sources */,
+				2732B80B2089AA5D009576E3 /* CollectionExtensions.swift in Sources */,
 				9CB5E135F0416D541391A454348D7D06 /* LibraryExtensions-dummy.m in Sources */,
 				D6804F6586EC5235B512A30DBE8CDAB4 /* URLExtensions.swift in Sources */,
+				2732B813208A64EC009576E3 /* UIAlertControllerExtensions.swift in Sources */,
+				2732B815208A73B4009576E3 /* IntExtensions.swift in Sources */,
 				27B47CFC20893BC600787334 /* UIViewControllerExtensions.swift in Sources */,
 				27B47CEF20890E3300787334 /* DateFormatterExtension.swift in Sources */,
+				2732B817208A75CA009576E3 /* UInt32Extensions.swift in Sources */,
+				2732B8092089AA1E009576E3 /* UISplitViewControllerExtensions.swift in Sources */,
 				3801B311B6C622B42F99E88BE3B5D9A8 /* URLRequestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

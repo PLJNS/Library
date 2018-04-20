@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2732B80520895145009576E3 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80420895145009576E3 /* BookTests.swift */; };
+		2732B80D208A49D4009576E3 /* BookEditorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80C208A49D4009576E3 /* BookEditorError.swift */; };
+		2732B80F208A6246009576E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2732B80E208A6246009576E3 /* Settings.bundle */; };
+		2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */; };
 		27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27483C5E2088285700EC1853 /* AppDelegate.swift */; };
 		27483C642088285700EC1853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27483C622088285700EC1853 /* Main.storyboard */; };
 		27483C662088285800EC1853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27483C652088285800EC1853 /* Assets.xcassets */; };
 		27483C692088285800EC1853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27483C672088285800EC1853 /* LaunchScreen.storyboard */; };
 		27483C742088285800EC1853 /* LibraryClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27483C732088285800EC1853 /* LibraryClientTests.swift */; };
 		27B47CF1208918C000787334 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF0208918C000787334 /* BooksViewController.swift */; };
-		27B47CF3208918CD00787334 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF2208918CD00787334 /* AddBookViewController.swift */; };
+		27B47CF3208918CD00787334 /* BookEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF2208918CD00787334 /* BookEditorViewController.swift */; };
 		27B47CF5208918D900787334 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF4208918D900787334 /* BookDetailViewController.swift */; };
 		27B47D0020894B6C00787334 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */; };
 		386DA90C7BF2FD4C45B88CE2 /* Pods_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3D40C3B1A855E73C7C66D7 /* Pods_Library.framework */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		117B39D1B8FF681F7CD5492E /* Pods-Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library/Pods-Library.release.xcconfig"; sourceTree = "<group>"; };
 		2732B80420895145009576E3 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
+		2732B80C208A49D4009576E3 /* BookEditorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditorError.swift; sourceTree = "<group>"; };
+		2732B80E208A6246009576E3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		27483C5B2088285700EC1853 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27483C5E2088285700EC1853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27483C632088285700EC1853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +50,7 @@
 		27483C732088285800EC1853 /* LibraryClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryClientTests.swift; sourceTree = "<group>"; };
 		27483C752088285900EC1853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B47CF0208918C000787334 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		27B47CF2208918CD00787334 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		27B47CF2208918CD00787334 /* BookEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditorViewController.swift; sourceTree = "<group>"; };
 		27B47CF4208918D900787334 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
 		2B35AC1DFB330E85CB806C59 /* Pods_LibraryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,15 +103,18 @@
 		27483C5D2088285700EC1853 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				27483C6A2088285800EC1853 /* Info.plist */,
 				27483C5E2088285700EC1853 /* AppDelegate.swift */,
-				27B47CF0208918C000787334 /* BooksViewController.swift */,
-				27B47CF2208918CD00787334 /* AddBookViewController.swift */,
 				27B47CF4208918D900787334 /* BookDetailViewController.swift */,
+				2732B80C208A49D4009576E3 /* BookEditorError.swift */,
+				27B47CF2208918CD00787334 /* BookEditorViewController.swift */,
+				27B47CF0208918C000787334 /* BooksViewController.swift */,
 				27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */,
-				27483C622088285700EC1853 /* Main.storyboard */,
 				27483C652088285800EC1853 /* Assets.xcassets */,
 				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
-				27483C6A2088285800EC1853 /* Info.plist */,
+				27483C622088285700EC1853 /* Main.storyboard */,
+				2732B80E208A6246009576E3 /* Settings.bundle */,
+				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2732B80F208A6246009576E3 /* Settings.bundle in Resources */,
 				27483C692088285800EC1853 /* LaunchScreen.storyboard in Resources */,
 				27483C662088285800EC1853 /* Assets.xcassets in Resources */,
 				27483C642088285700EC1853 /* Main.storyboard in Resources */,
@@ -303,9 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B47CF3208918CD00787334 /* AddBookViewController.swift in Sources */,
+				2732B80D208A49D4009576E3 /* BookEditorError.swift in Sources */,
+				27B47CF3208918CD00787334 /* BookEditorViewController.swift in Sources */,
 				27B47D0020894B6C00787334 /* PrimarySplitViewController.swift in Sources */,
 				27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */,
+				2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */,
 				27B47CF1208918C000787334 /* BooksViewController.swift in Sources */,
 				27B47CF5208918D900787334 /* BookDetailViewController.swift in Sources */,
 			);
