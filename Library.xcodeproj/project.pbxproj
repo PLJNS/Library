@@ -107,8 +107,8 @@
 				27B47CF0208918C000787334 /* BooksViewController.swift */,
 				27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */,
 				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
-				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
 				27483C622088285700EC1853 /* Main.storyboard */,
+				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
 				27483C652088285800EC1853 /* Assets.xcassets */,
 				2732B80E208A6246009576E3 /* Settings.bundle */,
 				27483C6A2088285800EC1853 /* Info.plist */,
@@ -482,7 +482,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -498,7 +501,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -515,7 +521,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -533,7 +543,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -13,7 +13,7 @@ protocol BookDetailViewControllerDelegate: class {
     func bookDetailViewController(viewController: BookDetailViewController, didUpdateBook: Book?)
 }
 
-class BookDetailViewController: UIViewController {
+class BookDetailViewController: UITableViewController {
 
     var book: Book? {
         didSet {
@@ -72,6 +72,8 @@ class BookDetailViewController: UIViewController {
                 
                 present(activityViewController, animated: true, completion: nil)
             }
+        case modifyBarButtonItem:
+            performSegue(withIdentifier: "BookDetailViewController_to_BookEditorViewController", sender: self)
         default:
             assert(false)
         }
@@ -113,6 +115,10 @@ class BookDetailViewController: UIViewController {
         default:
             ()
         }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     // MARK: - Custom
