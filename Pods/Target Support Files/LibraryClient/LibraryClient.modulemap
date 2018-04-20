@@ -1,6 +1,0 @@
-framework module LibraryClient {
-  umbrella header "LibraryClient-umbrella.h"
-
-  export *
-  module * { export * }
-}

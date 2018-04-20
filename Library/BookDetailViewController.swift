@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LibraryClient
+import LibraryService
 
 protocol BookDetailViewControllerDelegate: class {
     func bookDetailViewController(viewController: BookDetailViewController, didUpdateBook: Book?)

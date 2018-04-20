@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import LibraryClient
+import LibraryService
 
 public class DebugLibraryService: LibraryService {
     private var books: [Book] = []

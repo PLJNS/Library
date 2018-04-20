@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import LibraryClient
+@testable import LibraryService
 @testable import LibraryExtensions
 
 class LibraryClientTests: XCTestCase {

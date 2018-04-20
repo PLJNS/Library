@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import LibraryClient
+import LibraryService
 
 extension LibraryService {
     public func populateWithRandomBooks() {

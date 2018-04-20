@@ -6,7 +6,7 @@ target 'Library' do
   use_frameworks!
 
   pod 'LibraryExtensions', :path => './LibraryDevelopmentPods/LibraryExtensions/'
-  pod 'LibraryClient', :path => './LibraryDevelopmentPods/LibraryClient/'
+  pod 'LibraryService', :path => './LibraryDevelopmentPods/LibraryService/'
   pod 'LibraryDebug', :path => './LibraryDevelopmentPods/LibraryDebug/'
 
   target 'LibraryTests' do

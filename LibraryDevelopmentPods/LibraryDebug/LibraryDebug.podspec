@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.prefix_header_file = 'Sources/LibraryDebug-PrefixHeader.pch'
   spec.resources = 'Resources/*'
   spec.dependency 'LibraryExtensions'
-  spec.dependency 'LibraryClient'
+  spec.dependency 'LibraryService'
 end

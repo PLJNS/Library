@@ -11,8 +11,8 @@
 #endif
 
 
-#ifndef LibraryClient_PrefixHeader_pch
-#define LibraryClient_PrefixHeader_pch
+#ifndef LibraryService_PrefixHeader_pch
+#define LibraryService_PrefixHeader_pch
 
 
-#endif /* LibraryClient_PrefixHeader_pch */
+#endif /* LibraryService_PrefixHeader_pch */

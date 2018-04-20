@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LibraryClient
+import LibraryService
 import LibraryExtensions
 
 protocol BookEditorViewControllerDelegate: class {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LibraryClient
+import LibraryService
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

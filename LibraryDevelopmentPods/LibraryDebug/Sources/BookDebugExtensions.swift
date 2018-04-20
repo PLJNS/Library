@@ -5,7 +5,7 @@
 //  Created by Paul Jones on 4/20/18.
 //
 
-import LibraryClient
+import LibraryService
 import LibraryExtensions
 
 public extension BookProtocol {

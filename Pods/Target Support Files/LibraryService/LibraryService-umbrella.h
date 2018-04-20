@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LibraryClientVersionNumber;
-FOUNDATION_EXPORT const unsigned char LibraryClientVersionString[];
+FOUNDATION_EXPORT double LibraryServiceVersionNumber;
+FOUNDATION_EXPORT const unsigned char LibraryServiceVersionString[];
 
