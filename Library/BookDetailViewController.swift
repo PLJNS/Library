@@ -69,7 +69,7 @@ class BookDetailViewController: UITableViewController {
                 }
                 let activityViewController = UIActivityViewController(activityItems: textToShare,
                                                                       applicationActivities: nil)
-                
+                activityViewController.popoverPresentationController?.barButtonItem = shareBarButtonItem
                 present(activityViewController, animated: true, completion: nil)
             }
         case modifyBarButtonItem:
