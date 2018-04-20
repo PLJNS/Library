@@ -1,0 +1,34 @@
+{
+  "name": "LibraryDebug",
+  "version": "1.0.0",
+  "authors": "Paul Jones",
+  "homepage": "pljns.com",
+  "summary": "LibraryDebug",
+  "source": {
+    "git": "",
+    "tag": "1.0.0"
+  },
+  "module_name": "LibraryDebug",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": [
+    "Sources/**/*.swift",
+    "Sources/**/*.m",
+    "Sources/**/*.h",
+    "Sources/*.h",
+    "Sources/*.m",
+    "Sources/*.swift"
+  ],
+  "public_header_files": "Sources/LibraryDebug.h",
+  "prefix_header_file": "Sources/LibraryDebug-PrefixHeader.pch",
+  "resources": "Resources/*",
+  "dependencies": {
+    "LibraryExtensions": [
+
+    ],
+    "LibraryClient": [
+
+    ]
+  }
+}

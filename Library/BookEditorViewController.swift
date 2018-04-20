@@ -11,10 +11,32 @@ import LibraryClient
 import LibraryExtensions
 
 protocol BookEditorViewControllerDelegate: class {
-    func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book)
+    func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?)
 }
 
 class BookEditorViewController: UITableViewController {
+
+    // MARK: - Models
+
+    class Error: NSObject, LocalizedError {
+        var reason: String = ""
+
+        init(reason: String) {
+            self.reason = reason
+        }
+
+        override var description: String {
+            get {
+                return "Add book error: \(reason)"
+            }
+        }
+
+        var errorDescription: String? {
+            get {
+                return self.description
+            }
+        }
+    }
 
     enum Mode {
         case update
@@ -28,8 +50,10 @@ class BookEditorViewController: UITableViewController {
         }
     }
 
+    // MARK: - Public variables
+
     public var mode: Mode = .add
-    weak var delegate: BookEditorViewControllerDelegate?
+    public weak var delegate: BookEditorViewControllerDelegate?
     public var book: Book? {
         get {
             let title = titleTextField?.text?.nilIfEmpty
@@ -39,7 +63,6 @@ class BookEditorViewController: UITableViewController {
             return Book(author: author,
                         categories: categories,
                         id: bookStorage?.id,
-                        lastCheckedOut: bookStorage?.lastCheckedOut,
                         lastCheckedOutBy: bookStorage?.lastCheckedOutBy,
                         publisher: publisher,
                         title: title)
@@ -50,17 +73,19 @@ class BookEditorViewController: UITableViewController {
         }
     }
 
+    // MARK: - Private variables
+
     private var bookStorage: Book?
     private var somethingChanged: Bool = false
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak var titleTextField: UITextField?
-    @IBOutlet weak var authorTextField: UITextField?
-    @IBOutlet weak var publisherTextField: UITextField?
-    @IBOutlet weak var categoriesTextField: UITextField?
-    @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
-    @IBOutlet weak var cancelBarButtonItem: UIBarButtonItem!
+    @IBOutlet private weak var titleTextField: UITextField?
+    @IBOutlet private weak var authorTextField: UITextField?
+    @IBOutlet private weak var publisherTextField: UITextField?
+    @IBOutlet private weak var categoriesTextField: UITextField?
+    @IBOutlet private weak var doneBarButtonItem: UIBarButtonItem!
+    @IBOutlet private weak var cancelBarButtonItem: UIBarButtonItem!
 
     // MARK: - Overrides
 
@@ -83,22 +108,12 @@ class BookEditorViewController: UITableViewController {
         categoriesTextField?.text = bookStorage?.categories
     }
 
-    private func attemptToSubmit(completion: @escaping (Book?, Error?) -> ()) {
-        guard let _ = titleTextField?.text?.nilIfEmpty else {
-            completion(nil, BookEditorError(reason: "Please add a title.")); return
-        }
-        guard let _ = authorTextField?.text?.nilIfEmpty else {
-            completion(nil, BookEditorError(reason: "Please add an author.")); return
-        }
-        guard let _ = publisherTextField?.text?.nilIfEmpty else {
-            completion(nil, BookEditorError(reason: "Please add a publisher.")); return
-        }
-        guard let _ = categoriesTextField?.text?.nilIfEmpty else {
-            completion(nil, BookEditorError(reason: "Please add a categories.")); return
-        }
-        guard let theBook = book else {
-            completion(nil, BookEditorError(reason: "Unrecoverable error. Panic.")); return
-        }
+    private func attemptToSubmit(completion: @escaping (Book?, Swift.Error?) -> ()) {
+        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a title.")); return }
+        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add an author.")); return }
+        guard let _ = publisherTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a publisher.")); return }
+        guard let _ = categoriesTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a categories.")); return }
+        guard let theBook = book else { completion(nil, Error(reason: "Unrecoverable error. Panic.")); return }
 
         let processId = showLoading()
         switch mode {
@@ -106,13 +121,15 @@ class BookEditorViewController: UITableViewController {
             LibraryService.shared.update(book: theBook) { [weak self] (book, error) in
                 guard let strongSelf = self else { return }
                 strongSelf.hideLoading(procesId: processId)
-                strongSelf.delegate?.bookEditorViewController(viewController: strongSelf, didUpdateBook: theBook)
+                strongSelf.presentAlertControllerIfError(with: error)
+                strongSelf.delegate?.bookEditorViewController(viewController: strongSelf, didUpdateBook: book)
                 completion(book, error)
             }
         case .add:
             LibraryService.shared.add(book: theBook) { [weak self] (book, error) in
                 guard let strongSelf = self else { return }
                 strongSelf.hideLoading(procesId: processId)
+                strongSelf.presentAlertControllerIfError(with: error)
                 completion(book, error)
             }
         }
@@ -152,7 +169,6 @@ class BookEditorViewController: UITableViewController {
         default:
             assert(false)
         }
-
     }
 }
 

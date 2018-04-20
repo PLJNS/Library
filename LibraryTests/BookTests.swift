@@ -15,20 +15,18 @@ class BookTests: XCTestCase {
     let jsonDecoder = JSONDecoder()
 
     func testSingleComparison() {
-        let date = Date()
-        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
-        let book2 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book2 = Book(author: "1", categories: "2", id: 3, lastCheckedOutBy: "4", publisher: "5", title: "6")
         XCTAssertEqual(book1, book2)
     }
 
     func testMultipleComparison() {
-        let date = Date()
-        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
-        let book2 = Book(author: "7", categories: "8", id: 9, lastCheckedOut: date, lastCheckedOutBy: "10", publisher: "11", title: "12")
+        let book1 = Book(author: "1", categories: "2", id: 3, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book2 = Book(author: "7", categories: "8", id: 9, lastCheckedOutBy: "10", publisher: "11", title: "12")
         let books1 = [book1, book2]
 
-        let book3 = Book(author: "1", categories: "2", id: 3, lastCheckedOut: date, lastCheckedOutBy: "4", publisher: "5", title: "6")
-        let book4 = Book(author: "7", categories: "8", id: 9, lastCheckedOut: date, lastCheckedOutBy: "10", publisher: "11", title: "12")
+        let book3 = Book(author: "1", categories: "2", id: 3, lastCheckedOutBy: "4", publisher: "5", title: "6")
+        let book4 = Book(author: "7", categories: "8", id: 9, lastCheckedOutBy: "10", publisher: "11", title: "12")
         let books2 = [book3, book4]
 
         XCTAssertEqual(books1, books2)
@@ -73,13 +71,13 @@ class BookTests: XCTestCase {
     func testJSONEncodingSingleBook() {
         let expectedDate = Date()
         let dateString = DateFormatter.libraryDateFormatter.string(from: expectedDate)
-        let book = Book(author: "Ash Maurya",
+        var book = Book(author: "Ash Maurya",
                         categories: "process",
                         id: 1,
-                        lastCheckedOut: expectedDate,
                         lastCheckedOutBy: nil,
                         publisher: "O'REILLY",
                         title: "Running Lean")
+        book.lastCheckedOut = expectedDate
         do {
             let data = try jsonEncoder.encode(book)
             let json = String(data: data, encoding: .utf8)
@@ -141,13 +139,13 @@ class BookTests: XCTestCase {
     func testJSONEncodingMultipleBooks() {
         let expectedDate = Date()
         let dateString = DateFormatter.libraryDateFormatter.string(from: expectedDate)
-        let book = Book(author: "Ash Maurya",
+        var book = Book(author: "Ash Maurya",
                         categories: "process",
                         id: 1,
-                        lastCheckedOut: expectedDate,
                         lastCheckedOutBy: nil,
                         publisher: "O'REILLY",
                         title: "Running Lean")
+        book.lastCheckedOut = expectedDate
         let books = [book, book]
         do {
             let data = try jsonEncoder.encode(books)

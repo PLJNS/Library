@@ -27,7 +27,7 @@ class BooksViewController: UIViewController {
     @IBOutlet private weak var deleteBarButtonItem: UIBarButtonItem!
     @IBOutlet private var doneBarButtonItem: UIBarButtonItem!
     @IBOutlet private var deselectAllBarButtonItem: UIBarButtonItem!
-    @IBOutlet weak var flexibleSpaceBarButtonItem: UIBarButtonItem!
+    @IBOutlet private weak var flexibleSpaceBarButtonItem: UIBarButtonItem!
 
     // MARK: - Overrides
 
@@ -70,7 +70,11 @@ class BooksViewController: UIViewController {
             strongSelf.hideLoading(procesId: processId)
             strongSelf.presentAlertControllerIfError(with: error)
             if books != strongSelf.books {
-                strongSelf.books = books ?? []
+                if UserDefaults.standard.sortNewest {
+                    strongSelf.books = books?.reversed() ?? []
+                } else {
+                    strongSelf.books = books ?? []
+                }
                 strongSelf.tableView.reloadData()
                 if let _ = selectedIndexPath,
                     let selectedBookId = selectedBook?.id,
@@ -78,9 +82,7 @@ class BooksViewController: UIViewController {
                     strongSelf.tableView.selectRow(at: IndexPath(row: indexOfBook, section: 0),
                                                    animated: true,
                                                    scrollPosition: .none)
-                } else if strongSelf.splitViewController?.displayMode == .allVisible &&
-                    strongSelf.splitViewController?.isCollapsed == false &&
-                    strongSelf.tableView.isEditing == false {
+                } else if strongSelf.shouldSegueOnSelection {
                     strongSelf.attemptToSelectBookIfNeeded()
                 }
             }
@@ -92,8 +94,16 @@ class BooksViewController: UIViewController {
     private func attemptToSelectBookIfNeeded() {
         if books.count > 0 && tableView.indexPathForSelectedRow == nil {
             tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .none)
-            performSegue(withIdentifier: "BooksViewController_to_BookDetailViewController", sender: self)
+            if shouldSegueOnSelection {
+                performSegue(withIdentifier: "BooksViewController_to_BookDetailViewController", sender: self)
+            }
         }
+    }
+
+    private var shouldSegueOnSelection: Bool {
+        return splitViewController?.displayMode == .allVisible &&
+            splitViewController?.isCollapsed == false &&
+            tableView.isEditing == false
     }
 
     // MARK: - IBActions
@@ -105,9 +115,6 @@ class BooksViewController: UIViewController {
             tableView.setEditing(false, animated: true)
             navigationItem.setRightBarButton(editBarButtonItem, animated: true)
             navigationController?.setToolbarHidden(true, animated: true)
-            if detailViewController?.book == nil {
-                attemptToSelectBookIfNeeded()
-            }
         case editBarButtonItem:
             navigationController?.setToolbarHidden(false, animated: true)
             toolbarItems = [selectAllBarButtonItem, flexibleSpaceBarButtonItem, deleteBarButtonItem]
@@ -131,8 +138,8 @@ class BooksViewController: UIViewController {
                 let processId = showLoading()
                 LibraryService.shared.deleteAll { [weak self] (error) in
                     guard let strongSelf = self else { return }
-                    if let error = error { strongSelf.presentAlertControllerIfError(with: error); return }
                     strongSelf.hideLoading(procesId: processId)
+                    if let error = error { strongSelf.presentAlertControllerIfError(with: error); return }
                     strongSelf.tableView.setEditing(false, animated: true)
                     strongSelf.addBarButtonItem.isEnabled = true
                     strongSelf.navigationItem.setRightBarButton(strongSelf.editBarButtonItem, animated: true)
@@ -142,9 +149,10 @@ class BooksViewController: UIViewController {
                 }
             } else if let bookIds = tableView.indexPathsForSelectedRows?.compactMap({ return books[$0.row].id }).compactMap({ $0 }) {
                 let processId = showLoading()
-                LibraryService.shared.delete(bookIds: bookIds) { [weak self] (books, error) in
+                LibraryService.shared.delete(bookIds: bookIds) { [weak self] (books, errors) in
                     guard let strongSelf = self else { return }
                     strongSelf.hideLoading(procesId: processId)
+                    strongSelf.presentAlertControllerIfError(with: errors?.first)
                     strongSelf.attempToRequestAndReload()
                     if let bookId = strongSelf.detailViewController?.book?.id {
                         if bookIds.contains(bookId) {
@@ -171,6 +179,7 @@ extension BooksViewController: UITableViewDelegate {
             LibraryService.shared.delete(bookId: bookId, completion: { [weak self] (book, error) in
                 guard let strongSelf = self else { return }
                 strongSelf.hideLoading(procesId: processId)
+                strongSelf.presentAlertControllerIfError(with: error)
                 strongSelf.attempToRequestAndReload()
                 strongSelf.detailViewController?.book = nil
             })

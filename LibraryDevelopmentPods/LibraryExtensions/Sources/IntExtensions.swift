@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension Int {
-    static var random: Int {
+public extension Int {
+    public static var random: Int {
         return Int(UInt32.random)
     }
 }

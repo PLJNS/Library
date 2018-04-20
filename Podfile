@@ -7,6 +7,7 @@ target 'Library' do
 
   pod 'LibraryExtensions', :path => './LibraryDevelopmentPods/LibraryExtensions/'
   pod 'LibraryClient', :path => './LibraryDevelopmentPods/LibraryClient/'
+  pod 'LibraryDebug', :path => './LibraryDevelopmentPods/LibraryDebug/'
 
   target 'LibraryTests' do
     inherit! :search_paths

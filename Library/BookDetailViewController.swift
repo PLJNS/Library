@@ -17,8 +17,6 @@ class BookDetailViewController: UIViewController {
 
     var book: Book? {
         didSet {
-            shareBarButtonItem?.isEnabled = book != nil
-            modifyBarButtonItem.isEnabled = book != nil
             update()
         }
     }
@@ -44,10 +42,9 @@ class BookDetailViewController: UIViewController {
             requestNameIfNeeded { [weak self] (name) in
                 guard let strongSelf = self else { return }
                 if var book = strongSelf.book {
-                    book.lastCheckedOut = Date()
                     book.lastCheckedOutBy = name
                     let processId = strongSelf.showLoading()
-                    LibraryService.shared.update(book: book) { [weak self] (book, error) in
+                    LibraryService.shared.update(book: book, checkingOut: true) { [weak self] (book, error) in
                         guard let strongSelf = self else { return }
                         strongSelf.hideLoading(procesId: processId)
                         strongSelf.presentAlertControllerIfError(with: error)
@@ -87,7 +84,18 @@ class BookDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        update()
+        if let bookId = book?.id {
+            update()
+            LibraryService.shared.getBook(withId: bookId) { [weak self] (book, error) in
+                guard let strongSelf = self else { return }
+                strongSelf.presentAlertControllerIfError(with: error)
+                if let book = book {
+                    strongSelf.book = book
+                }
+            }
+        } else {
+            update()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,7 +122,10 @@ class BookDetailViewController: UIViewController {
         authorLabel?.text = book?.author ?? ""
         publisherLabel?.text = book?.publisher ?? ""
         tagsLabel?.text = book?.categories ?? ""
-        lastCheckedOutLabel?.text = book?.lastCheckedOutString ?? ""
+        lastCheckedOutLabel?.text = book?.lastCheckedOutString
+        shareBarButtonItem?.isEnabled = book != nil
+        modifyBarButtonItem.isEnabled = book != nil
+        checkoutButton?.isEnabled = book != nil
     }
 
     private func requestNameIfNeeded(completion: @escaping (String) -> ()) {
@@ -143,7 +154,7 @@ class BookDetailViewController: UIViewController {
 }
 
 extension BookDetailViewController: BookEditorViewControllerDelegate {
-    func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book) {
+    func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?) {
         self.book = book
         delegate?.bookDetailViewController(viewController: self, didUpdateBook: book)
     }

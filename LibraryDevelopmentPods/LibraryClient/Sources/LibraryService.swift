@@ -7,89 +7,49 @@
 
 import Foundation
 
-public class LibraryService {
+open class LibraryService {
+    open static let shared = LibraryService()
+    private let client = LibraryClient(withSession: URLSession(configuration: .default))
+    private init() { }
 
-    public static let shared = LibraryService()
-
-    let client = LibraryClient(withSession: URLSession(configuration: .default))
-
-    private var books: [Book] = []
-
-    public func populateWithRandomBooks() {
-        for _ in 0...100 {
-            add(book: Book.randomBook()) { (book, error) in
-                ()
-            }
-        }
+    open func getAllBooks(completion: @escaping ([Book]?, Error?) -> ()) {
+        client.load(.getAll, completion: completion)
     }
 
-    public func getAllBooks(completion: @escaping ([Book]?, Error?) -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(self.books, nil)
-        }
-//        client.load(.getAll, completionHandler: completion)
+    open func add(book: Book, completion: @escaping (Book?, Error?) -> ()) {
+        client.load(.add(book: book), completion: completion)
     }
 
-    public func add(book: Book, completion: @escaping (Book?, Error?) -> ()) {
-        var aBook = book
-        aBook.id = books.count
-        books.append(aBook)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(aBook, nil)
-        }
+    open func getBook(withId id: Int, completion: @escaping (Book?, Error?) -> ()) {
+        client.load(.get(bookId: id), completion: completion)
     }
 
-    public func getBook(withId id: Int, completion: @escaping (Book?, Error?) -> ()) {
-        let book = books.first(where: { $0.id == id })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(book, nil)
-        }
+    open func update(book: Book, checkingOut: Bool = false, completion: @escaping (Book?, Error?) -> ()) {
+        var book = book
+        book.lastCheckedOutBy = checkingOut ? book.lastCheckedOutBy : nil
+        client.load(.update(book: book), completion: completion)
     }
 
-    public func update(book: Book, completion: @escaping (Book?, Error?) -> ()) {
-        if let bookIndex = books.index(where: { book.id == $0.id }) {
-            let _ = books.remove(at: bookIndex)
-            books.insert(book, at: bookIndex)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                completion(book, nil)
-            }
-        } else {
-            completion(nil, nil)
-        }
+    open func delete(bookId: Int, completion: @escaping (Book?, Error?) -> ()) {
+        client.load(.delete(bookId: bookId), completion: completion)
     }
 
-    public func delete(bookId: Int, completion: @escaping (Book?, Error?) -> ()) {
-        if let bookIndex = books.index(where: { $0.id == bookId }) {
-            let book = books.remove(at: bookIndex)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                completion(book, nil)
-            }
-        } else {
-            completion(nil, nil)
-        }
+    open func deleteAll(completion: @escaping (Error?) -> ()) {
+        client.load(.deleteAll, completion: { (_: Book?, error) in
+            completion(error)
+        })
     }
 
-    public func delete(bookIds: [Int], completion: @escaping ([Book], Error?) -> ()) {
-        var books: [Book] = []
-        let dispatchGroup = DispatchGroup()
+    open func delete(bookIds: [Int], completion: @escaping ([Book], [Error]?) -> ()) {
+        var books: [Book] = [], errors: [Error] = [], dispatchGroup = DispatchGroup()
         for bookId in bookIds {
             dispatchGroup.enter()
             delete(bookId: bookId) { (book, error) in
-                if let book = book {
-                    books.append(book)
-                }
+                if let book = book { books.append(book) }
+                if let error = error { errors.append(error) }
                 dispatchGroup.leave()
             }
         }
-        dispatchGroup.notify(queue: .main) {
-            completion(books, nil)
-        }
-    }
-
-    public func deleteAll(completion: @escaping (Error?) -> ()) {
-        books = []
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(nil)
-        }
+        dispatchGroup.notify(queue: .main) { completion(books, errors) }
     }
 }

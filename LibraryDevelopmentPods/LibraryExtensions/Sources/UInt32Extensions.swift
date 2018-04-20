@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension UInt32 {
-    static var random: UInt32 {
+public extension UInt32 {
+    public static var random: UInt32 {
         return arc4random_uniform(UInt32.max)
     }
 }

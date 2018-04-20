@@ -144,10 +144,12 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryClient/LibraryClient.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryClient/LibraryClient.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

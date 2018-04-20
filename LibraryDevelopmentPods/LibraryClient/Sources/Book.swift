@@ -97,14 +97,12 @@ public struct Book: BookProtocol, Codable {
     public init(author: String?,
                 categories: String?,
                 id: Int?,
-                lastCheckedOut: Date?,
                 lastCheckedOutBy: String?,
                 publisher: String?,
                 title: String?) {
         self.author = author
         self.categories = categories
         self.id = id
-        self.lastCheckedOut = lastCheckedOut
         self.lastCheckedOutBy = lastCheckedOutBy
         self.publisher = publisher
         self.title = title
@@ -115,13 +113,13 @@ public struct Book: BookProtocol, Codable {
 extension Book : Equatable {
     public static func == (lhs: Book, rhs: Book) -> Bool {
         return lhs.author == rhs.author &&
-        lhs.categories == rhs.categories &&
-        lhs.id == rhs.id &&
-        lhs.lastCheckedOut == rhs.lastCheckedOut &&
-        lhs.lastCheckedOutBy == rhs.lastCheckedOutBy &&
-        lhs.publisher == rhs.publisher &&
-        lhs.title == rhs.title &&
-        lhs.url == rhs.url
+            lhs.categories == rhs.categories &&
+            lhs.id == rhs.id &&
+            lhs.lastCheckedOut == rhs.lastCheckedOut &&
+            lhs.lastCheckedOutBy == rhs.lastCheckedOutBy &&
+            lhs.publisher == rhs.publisher &&
+            lhs.title == rhs.title &&
+            lhs.url == rhs.url
     }
 }
 
@@ -139,16 +137,3 @@ extension Collection where Element == BookProtocol {
         return lhsIds == rhsIds
     }
 }
-
-extension BookProtocol {
-    static func randomBook() -> Book {
-        return Book(author: String.randomString(ofLength: 7),
-                    categories: String.randomString(ofLength: 7),
-                    id: nil,
-                    lastCheckedOut: Date(),
-                    lastCheckedOutBy: String.randomString(ofLength: 7),
-                    publisher: String.randomString(ofLength: 7),
-                    title: String.randomString(ofLength: 7))
-    }
-}
-

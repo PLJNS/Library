@@ -24,6 +24,16 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Sort newest</string>
+			<key>Key</key>
+			<string>sort_newest</string>
+			<key>DefaultValue</key>
+			<string>YES</string>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2732B80520895145009576E3 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80420895145009576E3 /* BookTests.swift */; };
-		2732B80D208A49D4009576E3 /* BookEditorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80C208A49D4009576E3 /* BookEditorError.swift */; };
 		2732B80F208A6246009576E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2732B80E208A6246009576E3 /* Settings.bundle */; };
 		2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */; };
 		27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27483C5E2088285700EC1853 /* AppDelegate.swift */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		117B39D1B8FF681F7CD5492E /* Pods-Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library/Pods-Library.release.xcconfig"; sourceTree = "<group>"; };
 		2732B80420895145009576E3 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
-		2732B80C208A49D4009576E3 /* BookEditorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditorError.swift; sourceTree = "<group>"; };
 		2732B80E208A6246009576E3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		27483C5B2088285700EC1853 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,18 +101,17 @@
 		27483C5D2088285700EC1853 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				27483C6A2088285800EC1853 /* Info.plist */,
 				27483C5E2088285700EC1853 /* AppDelegate.swift */,
 				27B47CF4208918D900787334 /* BookDetailViewController.swift */,
-				2732B80C208A49D4009576E3 /* BookEditorError.swift */,
 				27B47CF2208918CD00787334 /* BookEditorViewController.swift */,
 				27B47CF0208918C000787334 /* BooksViewController.swift */,
 				27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */,
-				27483C652088285800EC1853 /* Assets.xcassets */,
+				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
 				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
 				27483C622088285700EC1853 /* Main.storyboard */,
+				27483C652088285800EC1853 /* Assets.xcassets */,
 				2732B80E208A6246009576E3 /* Settings.bundle */,
-				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
+				27483C6A2088285800EC1853 /* Info.plist */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -294,11 +291,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Library/Pods-Library-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LibraryClient/LibraryClient.framework",
+				"${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryExtensions.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2732B80D208A49D4009576E3 /* BookEditorError.swift in Sources */,
 				27B47CF3208918CD00787334 /* BookEditorViewController.swift in Sources */,
 				27B47D0020894B6C00787334 /* PrimarySplitViewController.swift in Sources */,
 				27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */,
@@ -413,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -467,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
