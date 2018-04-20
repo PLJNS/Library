@@ -1,0 +1,144 @@
+//
+//  BookTests.swift
+//  LibraryTests
+//
+//  Created by Paul Jones on 4/19/18.
+//  Copyright © 2018 PLJNS. All rights reserved.
+//
+
+import XCTest
+@testable import LibraryClient
+
+class BookTests: XCTestCase {
+
+    let jsonEncoder = JSONEncoder()
+    let jsonDecoder = JSONDecoder()
+    
+    func testJSONDecodingSingleBook() {
+        let dateString = "2018-04-19 17:46:26 GMT"
+        let expectedDate = DateFormatter.libraryDateFormatter.date(from: dateString)
+
+        let json = """
+        {
+        "author": "Ash Maurya",
+        "categories": "process",
+        "id": 1,
+        "lastCheckedOut": "\(dateString)",
+        "lastCheckedOutBy": null,
+        "publisher": "O'REILLY",
+        "title": "Running Lean",
+        "url": "/books/1/"
+        }
+        """
+        if let bookJSONData = json.data(using: .utf8) {
+            do {
+                let book = try jsonDecoder.decode(Book.self, from: bookJSONData)
+                XCTAssertEqual(book.author, "Ash Maurya")
+                XCTAssertEqual(book.categories, "process")
+                XCTAssertEqual(book.id, 1)
+                XCTAssertEqual(book.lastCheckedOut, expectedDate)
+                XCTAssertEqual(book.lastCheckedOutBy, nil)
+                XCTAssertEqual(book.publisher, "O'REILLY")
+                XCTAssertEqual(book.title, "Running Lean")
+                XCTAssertEqual(book.url, "/books/1/")
+            } catch {
+                XCTFail()
+            }
+
+        } else {
+            XCTFail()
+        }
+    }
+
+    func testJSONEncodingSingleBook() {
+        let expectedDate = Date()
+        let dateString = DateFormatter.libraryDateFormatter.string(from: expectedDate)
+        let book = Book(author: "Ash Maurya",
+                        categories: "process",
+                        id: 1,
+                        lastCheckedOut: expectedDate,
+                        lastCheckedOutBy: nil,
+                        publisher: "O'REILLY",
+                        title: "Running Lean",
+                        url: "/books/1/")
+        do {
+            let data = try jsonEncoder.encode(book)
+            let json = String(data: data, encoding: .utf8)
+            let expectation = "{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"}"
+            XCTAssertEqual(json, expectation)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testJSONDecodingMultipleBooks() {
+        let dateString = "2018-04-19 17:46:26 GMT"
+        let expectedDate = DateFormatter.libraryDateFormatter.date(from: dateString)
+
+        let json = """
+        [{
+        "author": "Ash Maurya",
+        "categories": "process",
+        "id": 1,
+        "lastCheckedOut": "\(dateString)",
+        "lastCheckedOutBy": null,
+        "publisher": "O'REILLY",
+        "title": "Running Lean",
+        "url": "/books/1/"
+        },
+        {
+        "author": "Ash Maurya",
+        "categories": "process",
+        "id": 1,
+        "lastCheckedOut": "\(dateString)",
+        "lastCheckedOutBy": null,
+        "publisher": "O'REILLY",
+        "title": "Running Lean",
+        "url": "/books/1/"
+        }]
+        """
+        if let bookJSONData = json.data(using: .utf8) {
+            do {
+                let books = try jsonDecoder.decode([Book].self, from: bookJSONData)
+                for book in books {
+                    XCTAssertEqual(book.author, "Ash Maurya")
+                    XCTAssertEqual(book.categories, "process")
+                    XCTAssertEqual(book.id, 1)
+                    XCTAssertEqual(book.lastCheckedOut, expectedDate)
+                    XCTAssertEqual(book.lastCheckedOutBy, nil)
+                    XCTAssertEqual(book.publisher, "O'REILLY")
+                    XCTAssertEqual(book.title, "Running Lean")
+                    XCTAssertEqual(book.url, "/books/1/")
+                }
+            } catch {
+                XCTFail()
+            }
+
+        } else {
+            XCTFail()
+        }
+    }
+
+    func testJSONEncodingMultipleBooks() {
+        let expectedDate = Date()
+        let dateString = DateFormatter.libraryDateFormatter.string(from: expectedDate)
+        let book = Book(author: "Ash Maurya",
+                        categories: "process",
+                        id: 1,
+                        lastCheckedOut: expectedDate,
+                        lastCheckedOutBy: nil,
+                        publisher: "O'REILLY",
+                        title: "Running Lean",
+                        url: "/books/1/")
+        let books = [book, book]
+        do {
+            let data = try jsonEncoder.encode(books)
+            let json = String(data: data, encoding: .utf8)
+            let expectation = "[{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"},{\"author\":\"Ash Maurya\",\"id\":1,\"categories\":\"process\",\"title\":\"Running Lean\",\"publisher\":\"O\'REILLY\",\"lastCheckedOut\":\"\(dateString)\",\"url\":\"\\/books\\/1\\/\"}]"
+            XCTAssertEqual(json, expectation)
+        } catch {
+            XCTFail()
+        }
+    }
+    
+}

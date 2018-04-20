@@ -1,0 +1,22 @@
+PODS:
+  - LibraryClient (1.0.0):
+    - LibraryExtensions
+  - LibraryExtensions (1.0.0)
+
+DEPENDENCIES:
+  - LibraryClient (from `./LibraryDevelopmentPods/LibraryClient/`)
+  - LibraryExtensions (from `./LibraryDevelopmentPods/LibraryExtensions/`)
+
+EXTERNAL SOURCES:
+  LibraryClient:
+    :path: "./LibraryDevelopmentPods/LibraryClient/"
+  LibraryExtensions:
+    :path: "./LibraryDevelopmentPods/LibraryExtensions/"
+
+SPEC CHECKSUMS:
+  LibraryClient: 90f9d0bd8c73de5be6edf02327461360d8a18147
+  LibraryExtensions: c1fc6c422d1447c17c0193c1b70edd6378a1330c
+
+PODFILE CHECKSUM: 19d5c45d2c680a3b702ca17ffe83168c36d6e828
+
+COCOAPODS: 1.5.0

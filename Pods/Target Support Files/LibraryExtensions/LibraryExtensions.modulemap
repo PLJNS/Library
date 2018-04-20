@@ -1,0 +1,6 @@
+framework module LibraryExtensions {
+  umbrella header "LibraryExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
