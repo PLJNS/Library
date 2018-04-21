@@ -9,6 +9,7 @@
 import XCTest
 @testable import LibraryService
 @testable import LibraryExtensions
+@testable import CodableClient
 
 class LibraryClientTests: XCTestCase {
 
