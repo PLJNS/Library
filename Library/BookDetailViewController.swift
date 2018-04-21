@@ -135,10 +135,10 @@ class BookDetailViewController: UITableViewController {
         if let name = UserDefaults.standard.name {
             completion(name)
         } else {
-            let alertController = UIAlertController.inputAlertController(withTitle: "You found a book!",
-                                                                         message: "What name are you using to checkout with?",
-                                                                         placeholder: "John Doe",
-                                                                         confirmationActionTitle: "Confirm") { [weak self] (name) in
+            let alertController = UIAlertController.inputAlertController(withTitle: NSLocalizedString("You found a book!", comment: ""),
+                                                                         message: NSLocalizedString("What name are you using to checkout with?", comment: ""),
+                                                                         placeholder: NSLocalizedString("John Doe", comment: ""),
+                                                                         confirmationActionTitle: NSLocalizedString("Confirm", comment: "")) { [weak self] (name) in
                                                                             guard let strongSelf = self else { return }
                                                                             guard name != nil && !name!.isEmpty else {
                                                                                 strongSelf.requestNameIfNeeded(completion: completion)

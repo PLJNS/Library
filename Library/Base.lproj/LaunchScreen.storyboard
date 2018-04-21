@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-518" y="610"/>
         </scene>
-        <!--Library-->
+        <!--Table View Controller-->
         <scene sceneID="eqT-tc-14U">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="IXD-K6-Rce" sceneMemberID="viewController">
@@ -48,7 +47,7 @@
                             <outlet property="delegate" destination="IXD-K6-Rce" id="eOL-qz-82p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Library" id="4l9-BG-HUi">
+                    <navigationItem key="navigationItem" id="4l9-BG-HUi">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="FUc-9W-E4P"/>
                     </navigationItem>
                 </tableViewController>

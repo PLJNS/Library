@@ -20,15 +20,9 @@ class BookEditorViewController: UITableViewController {
 
     class Error: NSObject, LocalizedError {
         var reason: String = ""
-        init(reason: String) {
-            self.reason = reason
-        }
-        override var description: String {
-            return "Add book error: \(reason)"
-        }
-        var errorDescription: String? {
-            return self.description
-        }
+        init(reason: String) { self.reason = reason }
+        override var description: String { return reason }
+        var errorDescription: String? { return description }
     }
 
     enum Mode {
@@ -101,11 +95,11 @@ class BookEditorViewController: UITableViewController {
     }
 
     private func attemptToSubmit(completion: @escaping (Book?, Swift.Error?) -> ()) {
-        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a title.")); return }
-        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add an author.")); return }
-        guard let _ = publisherTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a publisher.")); return }
-        guard let _ = categoriesTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: "Please add a categories.")); return }
-        guard let theBook = book else { completion(nil, Error(reason: "Unrecoverable error. Panic.")); return }
+        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a title.", comment: ""))); return }
+        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add an author.", comment: ""))); return }
+        guard let _ = publisherTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a publisher.", comment: ""))); return }
+        guard let _ = categoriesTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a categories.", comment: ""))); return }
+        guard let theBook = book else { completion(nil, Error(reason: NSLocalizedString("Unrecoverable error. Panic.", comment: ""))); return }
 
         let processId = showLoading()
         switch mode {
@@ -144,10 +138,10 @@ class BookEditorViewController: UITableViewController {
             }
         case cancelBarButtonItem:
             if somethingChanged {
-                let alertController = UIAlertController.confirmationAlertController(withTitle: "Are you sure?",
-                                                                                    message: "Any unsaved changes will be lost.",
-                                                                                    confirmationActionTitle: "OK",
-                                                                                    cancelActionTitle: "Cancel",
+                let alertController = UIAlertController.confirmationAlertController(withTitle: NSLocalizedString("Are you sure?", comment: ""),
+                                                                                    message: NSLocalizedString("Any unsaved changes will be lost.", comment: ""),
+                                                                                    confirmationActionTitle: NSLocalizedString("OK", comment: ""),
+                                                                                    cancelActionTitle: NSLocalizedString("Cancel", comment: ""),
                                                                                     with: { [weak self] (confirmed) in
                                                                                         guard let strongSelf = self else { return }
                                                                                         if confirmed {
