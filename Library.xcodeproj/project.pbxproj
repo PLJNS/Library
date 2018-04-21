@@ -78,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2732B822208AB5C2009576E3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */,
+				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		27483C522088285700EC1853 = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				27483C5E2088285700EC1853 /* AppDelegate.swift */,
+				27B47CF0208918C000787334 /* BooksViewController.swift */,
 				27B47CF4208918D900787334 /* BookDetailViewController.swift */,
 				27B47CF2208918CD00787334 /* BookEditorViewController.swift */,
-				27B47CF0208918C000787334 /* BooksViewController.swift */,
-				27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */,
-				2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */,
 				27483C622088285700EC1853 /* Main.storyboard */,
 				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
+				2732B822208AB5C2009576E3 /* Utilities */,
 				27483C652088285800EC1853 /* Assets.xcassets */,
 				2732B80E208A6246009576E3 /* Settings.bundle */,
 				27483C6A2088285800EC1853 /* Info.plist */,

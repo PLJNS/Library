@@ -15,12 +15,9 @@ protocol BookDetailViewControllerDelegate: class {
 
 class BookDetailViewController: UITableViewController {
 
-    var book: Book? {
-        didSet {
-            update()
-        }
-    }
+    // MARK: - Public variables
 
+    public var book: Book? { didSet { update() } }
     weak var delegate: BookDetailViewControllerDelegate?
 
     // MARK: - IBOutlets
@@ -121,7 +118,7 @@ class BookDetailViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
 
-    // MARK: - Custom
+    // MARK: - Private functions
 
     private func update() {
         bookTitleLabel?.text = book?.title ?? ""

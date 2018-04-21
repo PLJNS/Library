@@ -20,28 +20,20 @@ class BookEditorViewController: UITableViewController {
 
     class Error: NSObject, LocalizedError {
         var reason: String = ""
-
         init(reason: String) {
             self.reason = reason
         }
-
         override var description: String {
-            get {
-                return "Add book error: \(reason)"
-            }
+            return "Add book error: \(reason)"
         }
-
         var errorDescription: String? {
-            get {
-                return self.description
-            }
+            return self.description
         }
     }
 
     enum Mode {
         case update
         case add
-
         var unwindSegueIdentifier: String {
             switch self {
             case .update: return "BookEditorViewController_to_BookDetailViewController"

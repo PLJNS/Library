@@ -12,9 +12,10 @@ import LibraryExtensions
 
 class BooksViewController: UIViewController {
 
-    var books: [Book] = []
-    var isGettingBooks: Bool = false
+    // MARK: - Private variables
 
+    private var books: [Book] = []
+    private var isGettingBooks: Bool = false
     private var detailViewController: BookDetailViewController? { return splitViewController?.detailViewController() }
     private let refreshControl = UIRefreshControl()
 
@@ -56,7 +57,7 @@ class BooksViewController: UIViewController {
         }
     }
 
-    // MARK: - Custom
+    // MARK: - Private functions
 
     @objc private func attempToRequestAndReload() {
         guard isGettingBooks == false else { return }
