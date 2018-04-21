@@ -143,11 +143,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework"

@@ -20,7 +20,7 @@ class LibraryClientTests: XCTestCase {
                     title: nil)
 
     func testGetAllBooksURL() {
-        let path = LibraryClient.Path.getAll
+        let path = LibraryPath.getAll
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/")
         XCTAssertEqual(path.method.rawValue,
@@ -28,7 +28,7 @@ class LibraryClientTests: XCTestCase {
     }
 
     func testAddBookURL() {
-        let path = LibraryClient.Path.add(book: book)
+        let path = LibraryPath.add(book: book)
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/")
         XCTAssertEqual(path.method.rawValue,
@@ -37,7 +37,7 @@ class LibraryClientTests: XCTestCase {
     }
 
     func testGetBookURL() {
-        let path = LibraryClient.Path.get(bookId: 0)
+        let path = LibraryPath.get(bookId: 0)
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/0/")
         XCTAssertEqual(path.method.rawValue,
@@ -46,7 +46,7 @@ class LibraryClientTests: XCTestCase {
     }
 
     func testUpdateBookURL() {
-        let path = LibraryClient.Path.update(book: book)
+        let path = LibraryPath.update(book: book)
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/0/")
         XCTAssertEqual(path.method.rawValue,
@@ -55,7 +55,7 @@ class LibraryClientTests: XCTestCase {
     }
 
     func testDeleteBookURL() {
-        let path = LibraryClient.Path.delete(bookId: 0)
+        let path = LibraryPath.delete(bookId: 0)
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/0/")
         XCTAssertEqual(path.method.rawValue,
@@ -64,7 +64,7 @@ class LibraryClientTests: XCTestCase {
     }
 
     func testDeleteAllURL() {
-        let path = LibraryClient.Path.deleteAll
+        let path = LibraryPath.deleteAll
         XCTAssertEqual(path.url!.absoluteString,
                        "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/clean/")
         XCTAssertEqual(path.method.rawValue,

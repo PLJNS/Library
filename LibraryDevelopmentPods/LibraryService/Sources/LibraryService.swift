@@ -6,36 +6,37 @@
 //
 
 import Foundation
+import CodableClient
 
 open class LibraryService {
     open static let shared = LibraryService()
-    private let client = LibraryClient(withSession: URLSession(configuration: .default))
+    private let client = CodableClient(withSession: URLSession(configuration: .default))
     private init() { }
 
     open func getAllBooks(completion: @escaping ([Book]?, Error?) -> ()) {
-        client.load(.getAll, completion: completion)
+        client.load(LibraryPath.getAll, completion: completion)
     }
 
     open func add(book: Book, completion: @escaping (Book?, Error?) -> ()) {
-        client.load(.add(book: book), completion: completion)
+        client.load(LibraryPath.add(book: book), completion: completion)
     }
 
     open func getBook(withId id: Int, completion: @escaping (Book?, Error?) -> ()) {
-        client.load(.get(bookId: id), completion: completion)
+        client.load(LibraryPath.get(bookId: id), completion: completion)
     }
 
     open func update(book: Book, checkingOut: Bool = false, completion: @escaping (Book?, Error?) -> ()) {
         var book = book
         book.lastCheckedOutBy = checkingOut ? book.lastCheckedOutBy : nil
-        client.load(.update(book: book), completion: completion)
+        client.load(LibraryPath.update(book: book), completion: completion)
     }
 
     open func delete(bookId: Int, completion: @escaping (Book?, Error?) -> ()) {
-        client.load(.delete(bookId: bookId), completion: completion)
+        client.load(LibraryPath.delete(bookId: bookId), completion: completion)
     }
 
     open func deleteAll(completion: @escaping (Error?) -> ()) {
-        client.load(.deleteAll, completion: { (_: Book?, error) in
+        client.load(LibraryPath.deleteAll, completion: { (_: Book?, error) in
             completion(error)
         })
     }

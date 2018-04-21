@@ -1,14 +1,14 @@
 {
-  "name": "LibraryService",
+  "name": "CodableClient",
   "version": "1.0.0",
   "authors": "Paul Jones",
   "homepage": "pljns.com",
-  "summary": "LibraryService",
+  "summary": "CodableClient",
   "source": {
     "git": "",
     "tag": "1.0.0"
   },
-  "module_name": "LibraryService",
+  "module_name": "CodableClient",
   "platforms": {
     "ios": "10.0"
   },
@@ -20,14 +20,11 @@
     "Sources/*.m",
     "Sources/*.swift"
   ],
-  "public_header_files": "Sources/LibraryService.h",
-  "prefix_header_file": "Sources/LibraryService-PrefixHeader.pch",
+  "public_header_files": "Sources/CodableClient.h",
+  "prefix_header_file": "Sources/CodableClient-PrefixHeader.pch",
   "resources": "Resources/*",
   "dependencies": {
     "LibraryExtensions": [
-
-    ],
-    "CodableClient": [
 
     ]
   }

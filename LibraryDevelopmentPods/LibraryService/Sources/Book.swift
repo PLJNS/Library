@@ -8,18 +8,6 @@
 import Foundation
 import LibraryExtensions
 
-public protocol BookProtocol {
-    var author: String? { get }
-    var categories: String? { get }
-    var id: Int? { get }
-    var lastCheckedOut: Date? { get }
-    var lastCheckedOutBy: String? { get }
-    var publisher: String? { get }
-    var title: String? { get }
-    var url: URL? { get }
-    var lastCheckedOutString: String? { get }
-}
-
 public struct Book: BookProtocol, Codable {
     public var author: String?
     public var categories: String?
@@ -34,7 +22,6 @@ public struct Book: BookProtocol, Codable {
         if let lastCheckedOut = lastCheckedOut, let lastCheckedOutBy = lastCheckedOutBy {
             return "\(lastCheckedOutBy) @ \(DateFormatter.displayDateFormatter.string(from: lastCheckedOut))"
         }
-
         return nil
     }
 
@@ -61,9 +48,9 @@ public struct Book: BookProtocol, Codable {
         publisher = try? container.decode(String.self, forKey: .publisher)
         title = try? container.decode(String.self, forKey: .title)
         if let path = try? container.decode(String.self, forKey: .url) {
-            url = LibraryClient.buildURL(withPath: path)
+            url = LibraryPath.buildURL(withPath: path)
         } else if let id = id {
-            url = LibraryClient.buildURL(withPath: "/books/\(id)")
+            url = LibraryPath.buildURL(withPath: "/books/\(id)")
         }
     }
 
@@ -106,34 +93,6 @@ public struct Book: BookProtocol, Codable {
         self.lastCheckedOutBy = lastCheckedOutBy
         self.publisher = publisher
         self.title = title
-        self.url = LibraryClient.buildURL(withPath: "/books/\(id ?? 0)")
-    }
-}
-
-extension Book : Equatable {
-    public static func == (lhs: Book, rhs: Book) -> Bool {
-        return lhs.author == rhs.author &&
-            lhs.categories == rhs.categories &&
-            lhs.id == rhs.id &&
-            lhs.lastCheckedOut == rhs.lastCheckedOut &&
-            lhs.lastCheckedOutBy == rhs.lastCheckedOutBy &&
-            lhs.publisher == rhs.publisher &&
-            lhs.title == rhs.title &&
-            lhs.url == rhs.url
-    }
-}
-
-extension Book: CustomStringConvertible { }
-extension BookProtocol where Self: CustomStringConvertible {
-    public var description: String {
-        return [author, title, publisher, categories].compactMap{ $0 }.joined(separator: ", ")
-    }
-}
-
-extension Collection where Element == BookProtocol {
-    public static func == (lhs: Self, rhs: Self) -> Bool {
-        let lhsIds = lhs.compactMap({ $0.id })
-        let rhsIds = rhs.compactMap({ $0.id })
-        return lhsIds == rhsIds
+        self.url = LibraryPath.buildURL(withPath: "/books/\(id ?? 0)")
     }
 }

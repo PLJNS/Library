@@ -1,17 +1,23 @@
 PODS:
+  - CodableClient (1.0.0):
+    - LibraryExtensions
   - LibraryDebug (1.0.0):
     - LibraryExtensions
     - LibraryService
   - LibraryExtensions (1.0.0)
   - LibraryService (1.0.0):
+    - CodableClient
     - LibraryExtensions
 
 DEPENDENCIES:
+  - CodableClient (from `./LibraryDevelopmentPods/CodableClient/`)
   - LibraryDebug (from `./LibraryDevelopmentPods/LibraryDebug/`)
   - LibraryExtensions (from `./LibraryDevelopmentPods/LibraryExtensions/`)
   - LibraryService (from `./LibraryDevelopmentPods/LibraryService/`)
 
 EXTERNAL SOURCES:
+  CodableClient:
+    :path: "./LibraryDevelopmentPods/CodableClient/"
   LibraryDebug:
     :path: "./LibraryDevelopmentPods/LibraryDebug/"
   LibraryExtensions:
@@ -20,10 +26,11 @@ EXTERNAL SOURCES:
     :path: "./LibraryDevelopmentPods/LibraryService/"
 
 SPEC CHECKSUMS:
+  CodableClient: 1cfaf48204af7ceb8a564a67b0118bb6dae03b7b
   LibraryDebug: 888139e8f17191054b7eb9885b659581087ab64c
   LibraryExtensions: c1fc6c422d1447c17c0193c1b70edd6378a1330c
-  LibraryService: 25b5a77d61fcfc904654bcb83e107ccbae1c8f82
+  LibraryService: 7a826bd172001e836f97f4779f934c07b9e05b14
 
-PODFILE CHECKSUM: 702473fc36dda42667e9c692f3150d0dcf85488e
+PODFILE CHECKSUM: b7ea9e2ec0099dbb24f09e69dc6e613acfa89329
 
 COCOAPODS: 1.5.0

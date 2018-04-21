@@ -8,6 +8,7 @@ target 'Library' do
   pod 'LibraryExtensions', :path => './LibraryDevelopmentPods/LibraryExtensions/'
   pod 'LibraryService', :path => './LibraryDevelopmentPods/LibraryService/'
   pod 'LibraryDebug', :path => './LibraryDevelopmentPods/LibraryDebug/'
+  pod 'CodableClient', :path => './LibraryDevelopmentPods/CodableClient/'
 
   target 'LibraryTests' do
     inherit! :search_paths

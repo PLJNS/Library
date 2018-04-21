@@ -11,7 +11,6 @@
 		2732B80F208A6246009576E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2732B80E208A6246009576E3 /* Settings.bundle */; };
 		2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */; };
 		2732B827208AB9A5009576E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732B829208AB9A5009576E3 /* Localizable.strings */; };
-		2732B82D208ABD09009576E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732B82B208ABD09009576E3 /* InfoPlist.strings */; };
 		2732B830208ABD09009576E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732B82E208ABD09009576E3 /* InfoPlist.strings */; };
 		27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27483C5E2088285700EC1853 /* AppDelegate.swift */; };
 		27483C642088285700EC1853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27483C622088285700EC1853 /* Main.storyboard */; };
@@ -45,7 +44,6 @@
 		2732B826208AB82C009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2732B828208AB9A5009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2732B82A208AB9B4009576E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2732B82C208ABD09009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2732B82F208ABD09009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27483C5B2088285700EC1853 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27483C5E2088285700EC1853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				27483C732088285800EC1853 /* LibraryClientTests.swift */,
 				2732B80420895145009576E3 /* BookTests.swift */,
 				27483C752088285900EC1853 /* Info.plist */,
-				2732B82B208ABD09009576E3 /* InfoPlist.strings */,
 			);
 			path = LibraryTests;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2732B82D208ABD09009576E3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,12 +318,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Library/Pods-Library-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryExtensions/LibraryExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryService.framework",
@@ -380,14 +378,6 @@
 				2732B82A208AB9B4009576E3 /* en */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		2732B82B208ABD09009576E3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2732B82C208ABD09009576E3 /* fr */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		2732B82E208ABD09009576E3 /* InfoPlist.strings */ = {
@@ -543,10 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -562,10 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -582,11 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,11 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -46,6 +46,7 @@ class BookDetailViewController: UITableViewController {
                         strongSelf.hideLoading(procesId: processId)
                         strongSelf.presentAlertControllerIfError(with: error)
                         strongSelf.book = book
+                        strongSelf.tableView.reloadData()
                         strongSelf.delegate?.bookDetailViewController(viewController: strongSelf, didUpdateBook: book)
                     }
                 }
@@ -91,6 +92,7 @@ class BookDetailViewController: UITableViewController {
                 if let book = book {
                     strongSelf.book = book
                 }
+                strongSelf.tableView.reloadData()
             }
         } else {
             update()
