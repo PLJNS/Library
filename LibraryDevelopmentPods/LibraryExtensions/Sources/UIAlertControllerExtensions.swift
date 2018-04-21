@@ -9,7 +9,7 @@ import Foundation
 
 extension UIAlertController {
     public static func alertController(withError error: Error) -> UIAlertController {
-        let alertController = UIAlertController(title: "Error",
+        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""),
                                                 message: error.localizedDescription,
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
