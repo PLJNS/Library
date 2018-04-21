@@ -77,7 +77,6 @@ class BookEditorViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        preferredContentSize = CGSize(width: preferredContentSize.width, height: 66 * 4)
         updateFromBook()
     }
 

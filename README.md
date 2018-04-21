@@ -1,3 +1,5 @@
+![Image of Yaktocat](./Images/HeaderImage.png)
+
 Library
 =======
 
