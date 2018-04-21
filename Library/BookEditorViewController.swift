@@ -77,8 +77,12 @@ class BookEditorViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        preferredContentSize = CGSize(width: preferredContentSize.width, height: 66 * 4)
+//        preferredContentSize = CGSize(width: preferredContentSize.width, height: 66 * 4)
         updateFromBook()
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     // MARK: - Custom
@@ -97,8 +101,6 @@ class BookEditorViewController: UITableViewController {
     private func attemptToSubmit(completion: @escaping (Book?, Swift.Error?) -> ()) {
         guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a title.", comment: ""))); return }
         guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add an author.", comment: ""))); return }
-        guard let _ = publisherTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a publisher.", comment: ""))); return }
-        guard let _ = categoriesTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a categories.", comment: ""))); return }
         guard let theBook = book else { completion(nil, Error(reason: NSLocalizedString("Unrecoverable error. Panic.", comment: ""))); return }
 
         let processId = showLoading()

@@ -194,6 +194,10 @@ extension BooksViewController: UITableViewDelegate {
             performSegue(withIdentifier: "BooksViewController_to_BookDetailViewController", sender: self)
         }
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }
 
 extension BooksViewController: UITableViewDataSource {
