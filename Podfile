@@ -18,3 +18,13 @@ target 'Library' do
   end
 
 end
+
+target 'Library for Mac' do
+    platform :osx, '10.10'
+    pod 'LibrarySwiftExtensions', :path => './LibraryDevelopmentPods/LibrarySwiftExtensions/'
+    pod 'LibraryModel', :path => './LibraryDevelopmentPods/LibraryModel/'
+    pod 'LibraryResources', :path => './LibraryDevelopmentPods/LibraryResources/'
+    pod 'LibraryService', :path => './LibraryDevelopmentPods/LibraryService/'
+    pod 'CodableClient', :path => './LibraryDevelopmentPods/CodableClient/'
+end
+
