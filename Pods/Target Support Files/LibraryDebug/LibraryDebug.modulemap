@@ -1,6 +1,0 @@
-framework module LibraryDebug {
-  umbrella header "LibraryDebug-umbrella.h"
-
-  export *
-  module * { export * }
-}

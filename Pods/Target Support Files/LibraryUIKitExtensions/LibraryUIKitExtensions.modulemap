@@ -1,6 +1,0 @@
-framework module LibraryUIKitExtensions {
-  umbrella header "LibraryUIKitExtensions-umbrella.h"
-
-  export *
-  module * { export * }
-}

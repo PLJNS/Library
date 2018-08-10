@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import LibraryService
-import EasyLoader
-import LibraryResources
-import LibraryModel
+
+
+
+
 
 protocol BookDetailViewControllerDelegate: class {
     func bookDetailViewController(viewController: BookDetailViewController, didUpdateBook: Book?)
@@ -140,10 +140,10 @@ class BookDetailViewController: UITableViewController {
         if let name = UserDefaults.standard.name {
             completion(name)
         } else {
-            let alertController = UIAlertController.inputAlertController(withTitle: L10n.nameAlertTitle,
-                                                                         message: L10n.nameAlertBody,
-                                                                         placeholder: L10n.exampleName,
-                                                                         confirmationActionTitle: L10n.confirm) { [weak self] (name) in
+            let alertController = UIAlertController.inputAlertController(withTitle: NSLocalizedString("You found a book!", comment: ""),
+                                                                         message: NSLocalizedString("What name are you using to checkout with?", comment: ""),
+                                                                         placeholder: NSLocalizedString("John Doe", comment: ""),
+                                                                         confirmationActionTitle: NSLocalizedString("Confirm", comment: "")) { [weak self] (name) in
                                                                             guard let strongSelf = self else { return }
                                                                             guard name != nil && !name!.isEmpty else {
                                                                                 strongSelf.requestNameIfNeeded(completion: completion)

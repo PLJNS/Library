@@ -1,6 +1,0 @@
-framework module EasyLoader {
-  umbrella header "EasyLoader-umbrella.h"
-
-  export *
-  module * { export * }
-}

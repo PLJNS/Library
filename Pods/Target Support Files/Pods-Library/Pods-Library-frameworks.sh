@@ -141,29 +141,6 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CodableClient-framework/CodableClient.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryModel-framework/LibraryModel.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryResources-framework/LibraryResources.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryService-framework/LibraryService.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions-framework/LibrarySwiftExtensions.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryTheme/LibraryTheme.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CodableClient-framework/CodableClient.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryModel-framework/LibraryModel.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryResources-framework/LibraryResources.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryService-framework/LibraryService.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions-framework/LibrarySwiftExtensions.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryTheme/LibraryTheme.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework"
-fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

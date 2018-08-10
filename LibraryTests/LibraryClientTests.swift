@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import LibraryService
-@testable import CodableClient
-@testable import LibraryModel
+@testable 
+@testable 
+@testable 
 
 class LibraryClientTests: XCTestCase {
 
