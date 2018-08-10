@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 class BooksViewController: UIViewController {
 
     // MARK: - Private variables

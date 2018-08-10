@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 protocol BookDetailViewControllerDelegate: class {
     func bookDetailViewController(viewController: BookDetailViewController, didUpdateBook: Book?)
 }
