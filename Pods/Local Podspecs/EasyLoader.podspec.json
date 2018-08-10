@@ -1,13 +1,8 @@
 {
   "name": "EasyLoader",
   "version": "1.0.0",
-  "license": {
-    "type": "MIT"
-  },
+  "authors": "Paul Jones",
   "homepage": "pljns.com",
-  "authors": {
-    "Prolific Interactive": "info@prolificinteractive.com"
-  },
   "summary": "EasyLoader",
   "source": {
     "git": "",
@@ -15,15 +10,10 @@
   },
   "module_name": "EasyLoader",
   "platforms": {
-    "ios": "10.0"
+    "ios": "10.0",
+    "osx": "10.10"
   },
-  "source_files": [
-    "Sources/*.swift",
-    "Sources/**/*.m",
-    "Sources/**/*.h",
-    "Sources/*.h",
-    "Sources/*.m"
-  ],
+  "source_files": "Sources/**/*.swift",
   "public_header_files": "Sources/EasyLoader.h",
   "prefix_header_file": "Sources/EasyLoader-PrefixHeader.pch",
   "resources": "Resources/*"

@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: c5f5195d9445ecc0d25af460caf1948fbdf5fd14
+PODS:
+  - EasyLoader (1.0.0)
+  - LibrarySwiftExtensions (1.0.0)
+
+DEPENDENCIES:
+  - EasyLoader (from `./LibraryDevelopmentPods/EasyLoader/`)
+  - LibrarySwiftExtensions (from `./LibraryDevelopmentPods/LibrarySwiftExtensions/`)
+
+EXTERNAL SOURCES:
+  EasyLoader:
+    :path: "./LibraryDevelopmentPods/EasyLoader/"
+  LibrarySwiftExtensions:
+    :path: "./LibraryDevelopmentPods/LibrarySwiftExtensions/"
+
+SPEC CHECKSUMS:
+  EasyLoader: 82204affbf7adad06b89fbedb812abe3618ee4ff
+  LibrarySwiftExtensions: be83712102b83758e02ca6bdf85d4a71d0b7c8a3
+
+PODFILE CHECKSUM: 916b6c2026e89ebd193d104411de29d00f15f64a
 
 COCOAPODS: 1.5.3

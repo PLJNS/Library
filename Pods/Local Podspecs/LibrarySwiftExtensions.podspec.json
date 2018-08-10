@@ -1,13 +1,8 @@
 {
   "name": "LibrarySwiftExtensions",
   "version": "1.0.0",
-  "license": {
-    "type": "MIT"
-  },
+  "authors": "Paul Jones",
   "homepage": "pljns.com",
-  "authors": {
-    "Prolific Interactive": "info@prolificinteractive.com"
-  },
   "summary": "LibrarySwiftExtensions",
   "source": {
     "git": "",
@@ -18,13 +13,7 @@
     "ios": "10.0",
     "osx": "10.10"
   },
-  "source_files": [
-    "Sources/*.swift",
-    "Sources/**/*.m",
-    "Sources/**/*.h",
-    "Sources/*.h",
-    "Sources/*.m"
-  ],
+  "source_files": "Sources/**/*.swift",
   "public_header_files": "Sources/LibrarySwiftExtensions.h",
   "prefix_header_file": "Sources/LibrarySwiftExtensions-PrefixHeader.pch",
   "resources": "Resources/*"

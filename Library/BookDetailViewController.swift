@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LibrarySwiftExtensions
+import EasyLoader
 
 protocol BookDetailViewControllerDelegate: class {
     func bookDetailViewController(viewController: BookDetailViewController, didUpdateBook: Book?)

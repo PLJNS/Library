@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LibrarySwiftExtensions
 
 protocol BookEditorViewControllerDelegate: class {
     func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?)

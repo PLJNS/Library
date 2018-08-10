@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LibrarySwiftExtensions
 
 class BooksViewController: UIViewController {
 

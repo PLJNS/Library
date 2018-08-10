@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27319C9D211D45A5004BB816 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C74211D45A5004BB816 /* StringExtensions.swift */; };
-		27319C9E211D45A5004BB816 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C75211D45A5004BB816 /* IntExtensions.swift */; };
-		27319C9F211D45A5004BB816 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C76211D45A5004BB816 /* CollectionExtensions.swift */; };
-		27319CA0211D45A5004BB816 /* UInt32Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C77211D45A5004BB816 /* UInt32Extensions.swift */; };
 		27319CA1211D45A5004BB816 /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C7A211D45A5004BB816 /* URLConvertible.swift */; };
 		27319CA2211D45A5004BB816 /* CodableClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C7B211D45A5004BB816 /* CodableClient.swift */; };
 		27319CA3211D45A5004BB816 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C7C211D45A5004BB816 /* HTTPMethod.swift */; };
-		27319CA5211D45A5004BB816 /* EasyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C80211D45A5004BB816 /* EasyLoader.swift */; };
 		27319CA8211D45A5004BB816 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C84211D45A5004BB816 /* UserDefaultsExtensions.swift */; };
 		27319CA9211D45A5004BB816 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C85211D45A5004BB816 /* PrimarySplitViewController.swift */; };
 		27319CAB211D45A5004BB816 /* BookExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C89211D45A5004BB816 /* BookExtensions.swift */; };
@@ -60,14 +55,9 @@
 /* Begin PBXFileReference section */
 		075F1F6F3115FE1205163D8A /* Pods-Library for Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library for Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library for Mac/Pods-Library for Mac.release.xcconfig"; sourceTree = "<group>"; };
 		117B39D1B8FF681F7CD5492E /* Pods-Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library/Pods-Library.release.xcconfig"; sourceTree = "<group>"; };
-		27319C74211D45A5004BB816 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		27319C75211D45A5004BB816 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
-		27319C76211D45A5004BB816 /* CollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
-		27319C77211D45A5004BB816 /* UInt32Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UInt32Extensions.swift; sourceTree = "<group>"; };
 		27319C7A211D45A5004BB816 /* URLConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
 		27319C7B211D45A5004BB816 /* CodableClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableClient.swift; sourceTree = "<group>"; };
 		27319C7C211D45A5004BB816 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		27319C80211D45A5004BB816 /* EasyLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyLoader.swift; sourceTree = "<group>"; };
 		27319C84211D45A5004BB816 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		27319C85211D45A5004BB816 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
 		27319C89211D45A5004BB816 /* BookExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookExtensions.swift; sourceTree = "<group>"; };
@@ -132,17 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27319C73211D45A5004BB816 /* Swift Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				27319C74211D45A5004BB816 /* StringExtensions.swift */,
-				27319C75211D45A5004BB816 /* IntExtensions.swift */,
-				27319C76211D45A5004BB816 /* CollectionExtensions.swift */,
-				27319C77211D45A5004BB816 /* UInt32Extensions.swift */,
-			);
-			path = "Swift Extensions";
-			sourceTree = "<group>";
-		};
 		27319C78211D45A5004BB816 /* CodableClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,14 +130,6 @@
 				27319C7C211D45A5004BB816 /* HTTPMethod.swift */,
 			);
 			path = CodableClient;
-			sourceTree = "<group>";
-		};
-		27319C7F211D45A5004BB816 /* EasyLoader */ = {
-			isa = PBXGroup;
-			children = (
-				27319C80211D45A5004BB816 /* EasyLoader.swift */,
-			);
-			path = EasyLoader;
 			sourceTree = "<group>";
 		};
 		27319C83211D45A5004BB816 /* Utilities */ = {
@@ -253,11 +224,9 @@
 				27483C672088285800EC1853 /* LaunchScreen.storyboard */,
 				27483C6A2088285800EC1853 /* Info.plist */,
 				27319C78211D45A5004BB816 /* CodableClient */,
-				27319C7F211D45A5004BB816 /* EasyLoader */,
 				27319C83211D45A5004BB816 /* Utilities */,
 				27319C88211D45A5004BB816 /* Model */,
 				27319C8D211D45A5004BB816 /* Service */,
-				27319C73211D45A5004BB816 /* Swift Extensions */,
 				275C5419211DFA57000DE585 /* Assets */,
 				27319C90211D45A5004BB816 /* UIKitExtensions */,
 				27319C98211D45A5004BB816 /* Debug */,
@@ -318,6 +287,7 @@
 				27483C572088285700EC1853 /* Sources */,
 				27483C582088285700EC1853 /* Frameworks */,
 				27483C592088285700EC1853 /* Resources */,
+				9C0E94B07ECD6E7A21CF7D44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +398,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9C0E94B07ECD6E7A21CF7D44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Library/Pods-Library-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework",
+				"${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions/LibrarySwiftExtensions.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyLoader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibrarySwiftExtensions.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Library/Pods-Library-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DCA85CB0CD1644C387193C51 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,15 +447,11 @@
 				27319CB5211D45A5004BB816 /* UIAlertControllerExtensions.swift in Sources */,
 				27B47CF3208918CD00787334 /* BookEditorViewController.swift in Sources */,
 				27319CB6211D45A5004BB816 /* LibraryServiceDebugExtensions.swift in Sources */,
-				27319C9E211D45A5004BB816 /* IntExtensions.swift in Sources */,
 				27319CB2211D45A5004BB816 /* UITableViewExtensions.swift in Sources */,
 				27319CB0211D45A5004BB816 /* LibraryService.swift in Sources */,
 				27319CA1211D45A5004BB816 /* URLConvertible.swift in Sources */,
 				27319CA2211D45A5004BB816 /* CodableClient.swift in Sources */,
 				27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */,
-				27319CA5211D45A5004BB816 /* EasyLoader.swift in Sources */,
-				27319C9F211D45A5004BB816 /* CollectionExtensions.swift in Sources */,
-				27319C9D211D45A5004BB816 /* StringExtensions.swift in Sources */,
 				27319CAC211D45A5004BB816 /* BookProtocol.swift in Sources */,
 				27319CA8211D45A5004BB816 /* UserDefaultsExtensions.swift in Sources */,
 				27319CB7211D45A5004BB816 /* BookDebugExtensions.swift in Sources */,
@@ -473,7 +459,6 @@
 				27319CAF211D45A5004BB816 /* LibraryPath.swift in Sources */,
 				27319CAD211D45A5004BB816 /* Book.swift in Sources */,
 				27319CAE211D45A5004BB816 /* DateFormatterExtension.swift in Sources */,
-				27319CA0211D45A5004BB816 /* UInt32Extensions.swift in Sources */,
 				27319CB4211D45A5004BB816 /* UIViewControllerExtensions.swift in Sources */,
 				27319CB9211D45A5004BB816 /* DebugLibraryService.swift in Sources */,
 				27319CB3211D45A5004BB816 /* UISplitViewControllerExtensions.swift in Sources */,
@@ -668,10 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -687,10 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.Library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -707,11 +686,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -729,11 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF6RL3879H;
 				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pljns.LibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
