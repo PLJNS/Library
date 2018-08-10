@@ -8,7 +8,7 @@
 
 import UIKit
 import LibraryService
-import LibraryExtensions
+
 
 protocol BookEditorViewControllerDelegate: class {
     func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?)

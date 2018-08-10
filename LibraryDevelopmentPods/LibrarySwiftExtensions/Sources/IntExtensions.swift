@@ -1,8 +1,8 @@
 //
 //  IntExtensions.swift
-//  LibraryExtensions
+//  LibraryDebug
 //
-//  Created by Paul Jones on 4/20/18.
+//  Created by Paul Jones on 8/9/18.
 //
 
 import Foundation

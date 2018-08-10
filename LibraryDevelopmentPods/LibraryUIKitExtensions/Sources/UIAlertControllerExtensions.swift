@@ -1,11 +1,11 @@
 //
 //  UIAlertControllerExtensions.swift
-//  LibraryExtensions
+//  LibraryUIKitExtensions
 //
-//  Created by Paul Jones on 4/20/18.
+//  Created by Paul Jones on 8/9/18.
 //
 
-import Foundation
+import UIKit
 
 extension UIAlertController {
     public static func alertController(withError error: Error) -> UIAlertController {

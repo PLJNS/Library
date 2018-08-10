@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import LibraryExtensions
 
 public struct Book: BookProtocol, Codable {
     public var author: String?

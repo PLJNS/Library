@@ -8,13 +8,6 @@
 import Foundation
 
 public extension UIViewController {
-
-    public func presentAlertControllerIfError(with error: Error?) {
-        guard let error = error else { return }
-        let alertController = UIAlertController.alertController(withError: error)
-        present(alertController, animated: true, completion: nil)
-    }
-
     public func showLoading(style: UIActivityIndicatorViewStyle = .gray) -> Int {
         let processId = Int.random
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: style)

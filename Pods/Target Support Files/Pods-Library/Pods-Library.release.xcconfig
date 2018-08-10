@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryDebug" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient" "${PODS_CONFIGURATION_BUILD_DIR}/EasyLoader" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryDebug" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService" "${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryUIKitExtensions"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient/CodableClient.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryDebug/LibraryDebug.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryExtensions/LibraryExtensions.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService/LibraryService.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CodableClient" -framework "LibraryDebug" -framework "LibraryExtensions" -framework "LibraryService"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient/CodableClient.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/EasyLoader/EasyLoader.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryDebug/LibraryDebug.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService/LibraryService.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions/LibrarySwiftExtensions.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "CodableClient" -framework "EasyLoader" -framework "LibraryDebug" -framework "LibraryService" -framework "LibrarySwiftExtensions" -framework "LibraryUIKitExtensions"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

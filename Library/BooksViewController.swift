@@ -8,7 +8,8 @@
 
 import UIKit
 import LibraryService
-import LibraryExtensions
+import LibrarySwiftExtensions
+import LibraryUIKitExtensions
 
 class BooksViewController: UIViewController {
 

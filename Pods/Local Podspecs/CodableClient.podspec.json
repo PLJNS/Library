@@ -22,10 +22,5 @@
   ],
   "public_header_files": "Sources/CodableClient.h",
   "prefix_header_file": "Sources/CodableClient-PrefixHeader.pch",
-  "resources": "Resources/*",
-  "dependencies": {
-    "LibraryExtensions": [
-
-    ]
-  }
+  "resources": "Resources/*"
 }

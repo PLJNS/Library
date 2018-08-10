@@ -24,9 +24,6 @@
   "prefix_header_file": "Sources/LibraryService-PrefixHeader.pch",
   "resources": "Resources/*",
   "dependencies": {
-    "LibraryExtensions": [
-
-    ],
     "CodableClient": [
 
     ]

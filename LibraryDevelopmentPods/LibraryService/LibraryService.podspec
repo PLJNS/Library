@@ -11,6 +11,5 @@ Pod::Spec.new do |spec|
   spec.public_header_files = 'Sources/LibraryService.h'
   spec.prefix_header_file = 'Sources/LibraryService-PrefixHeader.pch'
   spec.resources = 'Resources/*'
-  spec.dependency 'LibraryExtensions'
   spec.dependency 'CodableClient'
 end

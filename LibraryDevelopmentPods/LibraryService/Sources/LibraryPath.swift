@@ -57,8 +57,10 @@ public enum LibraryPath: URLConvertible {
     internal static let id = "5acb830d057b610009a97cb8"
 
     internal static func buildURL(withPath path: String) -> URL? {
-        return URL(scheme: LibraryPath.scheme,
-                   host: LibraryPath.host,
-                   path: "/\(LibraryPath.id)\(path)")
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = "/\(LibraryPath.id)\(path)"
+        return URL(string: components.url?.absoluteString ?? "")
     }
 }

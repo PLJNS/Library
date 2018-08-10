@@ -24,7 +24,7 @@
   "prefix_header_file": "Sources/LibraryDebug-PrefixHeader.pch",
   "resources": "Resources/*",
   "dependencies": {
-    "LibraryExtensions": [
+    "LibrarySwiftExtensions": [
 
     ],
     "LibraryService": [

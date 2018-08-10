@@ -11,6 +11,8 @@
 #endif
 
 
-FOUNDATION_EXPORT double LibraryExtensionsVersionNumber;
-FOUNDATION_EXPORT const unsigned char LibraryExtensionsVersionString[];
+#ifndef LibraryUIKitExtensions_PrefixHeader_pch
+#define LibraryUIKitExtensions_PrefixHeader_pch
 
+
+#endif /* LibraryUIKitExtensions_PrefixHeader_pch */

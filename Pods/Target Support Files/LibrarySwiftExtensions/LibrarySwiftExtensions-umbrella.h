@@ -11,8 +11,6 @@
 #endif
 
 
-#ifndef LibraryExtensions_PrefixHeader_pch
-#define LibraryExtensions_PrefixHeader_pch
+FOUNDATION_EXPORT double LibrarySwiftExtensionsVersionNumber;
+FOUNDATION_EXPORT const unsigned char LibrarySwiftExtensionsVersionString[];
 
-
-#endif /* LibraryExtensions_PrefixHeader_pch */

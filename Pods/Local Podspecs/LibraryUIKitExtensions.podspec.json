@@ -1,0 +1,35 @@
+{
+  "name": "LibraryUIKitExtensions",
+  "version": "1.0.0",
+  "license": {
+    "type": "MIT"
+  },
+  "homepage": "pljns.com",
+  "authors": {
+    "Prolific Interactive": "info@prolificinteractive.com"
+  },
+  "summary": "LibraryUIKitExtensions",
+  "source": {
+    "git": "",
+    "tag": "1.0.0"
+  },
+  "module_name": "LibraryUIKitExtensions",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": [
+    "Sources/*.swift",
+    "Sources/**/*.m",
+    "Sources/**/*.h",
+    "Sources/*.h",
+    "Sources/*.m"
+  ],
+  "public_header_files": "Sources/LibraryUIKitExtensions.h",
+  "prefix_header_file": "Sources/LibraryUIKitExtensions-PrefixHeader.pch",
+  "resources": "Resources/*",
+  "dependencies": {
+    "LibrarySwiftExtensions": [
+
+    ]
+  }
+}

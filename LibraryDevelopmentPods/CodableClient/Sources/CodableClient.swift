@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import LibraryExtensions
 
 public struct CodableClient {
     private let decoder = JSONDecoder()

@@ -1,0 +1,33 @@
+{
+  "name": "LibraryFoundationExtensions",
+  "version": "1.0.0",
+  "license": {
+    "type": "MIT"
+  },
+  "homepage": "pljns.com",
+  "authors": {
+    "Prolific Interactive": "info@prolificinteractive.com"
+  },
+  "summary": "LibraryFoundationExtensions",
+  "source": {
+    "git": "",
+    "tag": "1.0.0"
+  },
+  "module_name": "LibraryFoundationExtensions",
+  "source_files": [
+    "Sources/*.swift",
+    "Sources/**/*.m",
+    "Sources/**/*.h",
+    "Sources/*.h",
+    "Sources/*.m"
+  ],
+  "public_header_files": "Sources/LibraryFoundationExtensions.h",
+  "prefix_header_file": "Sources/LibraryFoundationExtensions-PrefixHeader.pch",
+  "resources": "Resources/*",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LibrarySwiftExtensions
 
 public extension UISplitViewController {
     public func detailViewController<T: UIViewController>() -> T? {
