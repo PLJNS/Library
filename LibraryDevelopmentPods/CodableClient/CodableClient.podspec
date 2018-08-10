@@ -6,7 +6,8 @@ Pod::Spec.new do |spec|
   spec.summary = 'CodableClient'
   spec.source = { :git => '', :tag => '1.0.0' }
   spec.module_name = 'CodableClient'
-  spec.ios.deployment_target = '10.0'
+  spec.ios.deployment_target  = '10.0'
+  spec.osx.deployment_target  = '10.10'
   spec.source_files = 'Sources/**/*.swift', 'Sources/**/*.m', 'Sources/**/*.h', 'Sources/*.h', 'Sources/*.m', 'Sources/*.swift'
   spec.public_header_files = 'Sources/CodableClient.h'
   spec.prefix_header_file = 'Sources/CodableClient-PrefixHeader.pch'

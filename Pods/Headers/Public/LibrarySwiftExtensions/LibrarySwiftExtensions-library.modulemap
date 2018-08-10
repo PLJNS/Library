@@ -1,0 +1,6 @@
+module LibrarySwiftExtensions {
+  umbrella header "LibrarySwiftExtensions-library-umbrella.h"
+
+  export *
+  module * { export * }
+}

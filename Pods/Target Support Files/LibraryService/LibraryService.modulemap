@@ -1,6 +1,0 @@
-framework module LibraryService {
-  umbrella header "LibraryService-umbrella.h"
-
-  export *
-  module * { export * }
-}

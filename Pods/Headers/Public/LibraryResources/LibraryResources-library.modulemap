@@ -1,0 +1,6 @@
+module LibraryResources {
+  umbrella header "LibraryResources-library-umbrella.h"
+
+  export *
+  module * { export * }
+}

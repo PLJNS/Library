@@ -1,0 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryModel-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryResources-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions-library"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CodableClient-library/CodableClient.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryModel-library/LibraryModel.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryResources-library/LibraryResources.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryService-library/LibraryService.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions-library/LibrarySwiftExtensions.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CodableClient-library" -l"LibraryModel-library" -l"LibraryResources-library" -l"LibraryService-library" -l"LibrarySwiftExtensions-library"
+OTHER_SWIFT_FLAGS = $(inherited) -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CodableClient-library/CodableClient.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryModel-library/LibraryModel.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryResources-library/LibraryResources.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibraryService-library/LibraryService.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions-library/LibrarySwiftExtensions.modulemap" $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CodableClient-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryModel-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryResources-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibraryService-library" "${PODS_CONFIGURATION_BUILD_DIR}/LibrarySwiftExtensions-library"

@@ -1,0 +1,6 @@
+framework module CodableClient {
+  umbrella header "CodableClient-framework-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,6 +14,10 @@
     "tag": "1.0.0"
   },
   "module_name": "LibrarySwiftExtensions",
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.10"
+  },
   "source_files": [
     "Sources/*.swift",
     "Sources/**/*.m",
@@ -23,11 +27,5 @@
   ],
   "public_header_files": "Sources/LibrarySwiftExtensions.h",
   "prefix_header_file": "Sources/LibrarySwiftExtensions-PrefixHeader.pch",
-  "resources": "Resources/*",
-  "platforms": {
-    "osx": null,
-    "ios": null,
-    "tvos": null,
-    "watchos": null
-  }
+  "resources": "Resources/*"
 }

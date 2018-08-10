@@ -1,0 +1,6 @@
+module Pods_Library_for_Mac {
+  umbrella header "Pods-Library for Mac-umbrella.h"
+
+  export *
+  module * { export * }
+}

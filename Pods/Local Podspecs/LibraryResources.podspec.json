@@ -14,6 +14,10 @@
     "tag": "1.0.0"
   },
   "module_name": "LibraryResources",
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.10"
+  },
   "source_files": "Sources/*",
   "public_header_files": "Sources/LibraryResources.h",
   "prefix_header_file": "Sources/LibraryResources-PrefixHeader.pch",
@@ -27,11 +31,5 @@
     "SwiftGen": [
 
     ]
-  },
-  "platforms": {
-    "osx": null,
-    "ios": null,
-    "tvos": null,
-    "watchos": null
   }
 }

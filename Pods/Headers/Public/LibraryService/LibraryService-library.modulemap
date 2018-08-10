@@ -1,0 +1,6 @@
+module LibraryService {
+  umbrella header "LibraryService-library-umbrella.h"
+
+  export *
+  module * { export * }
+}
