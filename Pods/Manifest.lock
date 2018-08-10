@@ -2,12 +2,16 @@ PODS:
   - CodableClient (1.0.0)
   - EasyLoader (1.0.0)
   - LibraryDebug (1.0.0):
+    - LibraryModel
     - LibraryService
     - LibrarySwiftExtensions
+  - LibraryModel (1.0.0):
+    - SwiftGen
   - LibraryResources (1.0.0):
     - SwiftGen
   - LibraryService (1.0.0):
     - CodableClient
+    - LibraryModel
   - LibrarySwiftExtensions (1.0.0)
   - LibraryTheme (1.0.0):
     - LibraryResources
@@ -19,6 +23,7 @@ DEPENDENCIES:
   - CodableClient (from `./LibraryDevelopmentPods/CodableClient/`)
   - EasyLoader (from `./LibraryDevelopmentPods/EasyLoader/`)
   - LibraryDebug (from `./LibraryDevelopmentPods/LibraryDebug/`)
+  - LibraryModel (from `./LibraryDevelopmentPods/LibraryModel/`)
   - LibraryResources (from `./LibraryDevelopmentPods/LibraryResources/`)
   - LibraryService (from `./LibraryDevelopmentPods/LibraryService/`)
   - LibrarySwiftExtensions (from `./LibraryDevelopmentPods/LibrarySwiftExtensions/`)
@@ -36,6 +41,8 @@ EXTERNAL SOURCES:
     :path: "./LibraryDevelopmentPods/EasyLoader/"
   LibraryDebug:
     :path: "./LibraryDevelopmentPods/LibraryDebug/"
+  LibraryModel:
+    :path: "./LibraryDevelopmentPods/LibraryModel/"
   LibraryResources:
     :path: "./LibraryDevelopmentPods/LibraryResources/"
   LibraryService:
@@ -50,14 +57,15 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CodableClient: 531f13a5db7784b2f9d3b63e35aea1756e582c00
   EasyLoader: 307f72c58add23a90d922ae73a300f8b6b6f50ad
-  LibraryDebug: 772a70359af4502acbfbc98aea30d592d5f7a18a
+  LibraryDebug: ccf0c2dd4c18a49c74045ac21b07b80c5b9c3a3b
+  LibraryModel: e9af3e140894776bdfe619a2c2085c3d47a84c69
   LibraryResources: 7bf73cce34ed2e4f933df6bdff27bf69c363db69
-  LibraryService: 9a2c7b8073fa491a469cf65d754007ab25fb66e7
+  LibraryService: d1e5dbac0b6792d67bdbffc3f48fac3fe7ccb75a
   LibrarySwiftExtensions: e86fad6ce8d9abc80c7415696d84c7f472e92e3e
   LibraryTheme: dac0bf651e2951571ae51268c0ccffbab60e31b6
   LibraryUIKitExtensions: a264bc675337f9d55e72ff83e4c4e2f8a591f69b
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: 1860e9704fd666dec1db66e5fb91d246ece22702
+PODFILE CHECKSUM: 92433190b879b32aebd0de6bc3398a9e2a8c4398
 
 COCOAPODS: 1.5.3

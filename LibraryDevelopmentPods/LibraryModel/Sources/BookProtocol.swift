@@ -15,6 +15,6 @@ public protocol BookProtocol {
     var lastCheckedOutBy: String? { get }
     var publisher: String? { get }
     var title: String? { get }
-    var url: URL? { get }
+    var url: String? { get }
     var lastCheckedOutString: String? { get }
 }

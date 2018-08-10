@@ -7,6 +7,7 @@
 
 import Foundation
 import CodableClient
+import LibraryModel
 
 open class LibraryService {
     open static let shared = LibraryService()

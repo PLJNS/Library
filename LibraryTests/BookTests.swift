@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import LibraryService
+@testable import LibraryModel
 
 class BookTests: XCTestCase {
 
@@ -58,7 +59,7 @@ class BookTests: XCTestCase {
                 XCTAssertEqual(book.lastCheckedOutBy, nil)
                 XCTAssertEqual(book.publisher, "O'REILLY")
                 XCTAssertEqual(book.title, "Running Lean")
-                XCTAssertEqual(book.url?.absoluteString, "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/1/")
+                XCTAssertEqual(book.url, "/books/1/")
             } catch {
                 XCTFail()
             }
@@ -125,7 +126,7 @@ class BookTests: XCTestCase {
                     XCTAssertEqual(book.lastCheckedOutBy, nil)
                     XCTAssertEqual(book.publisher, "O'REILLY")
                     XCTAssertEqual(book.title, "Running Lean")
-                    XCTAssertEqual(book.url?.absoluteString, "https://prolific-interview.herokuapp.com/5acb830d057b610009a97cb8/books/1/")
+                    XCTAssertEqual(book.url, "/books/1/")
                 }
             } catch {
                 XCTFail()

@@ -6,6 +6,7 @@
 //
 
 import LibraryService
+import LibraryModel
 
 extension LibraryService {
     public func populateWithRandomBooks() {

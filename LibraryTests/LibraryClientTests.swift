@@ -8,8 +8,8 @@
 
 import XCTest
 @testable import LibraryService
-@testable import LibraryExtensions
 @testable import CodableClient
+@testable import LibraryModel
 
 class LibraryClientTests: XCTestCase {
 

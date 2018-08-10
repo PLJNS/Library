@@ -10,6 +10,7 @@ import UIKit
 import LibraryService
 import LibrarySwiftExtensions
 import LibraryUIKitExtensions
+import LibraryModel
 
 class BooksViewController: UIViewController {
 

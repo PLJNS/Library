@@ -15,7 +15,7 @@ public struct Book: BookProtocol, Codable {
     public var lastCheckedOutBy: String?
     public var publisher: String?
     public var title: String?
-    public var url: URL?
+    public var url: String?
 
     public var lastCheckedOutString: String? {
         if let lastCheckedOut = lastCheckedOut, let lastCheckedOutBy = lastCheckedOutBy {
@@ -47,9 +47,9 @@ public struct Book: BookProtocol, Codable {
         publisher = try? container.decode(String.self, forKey: .publisher)
         title = try? container.decode(String.self, forKey: .title)
         if let path = try? container.decode(String.self, forKey: .url) {
-            url = LibraryPath.buildURL(withPath: path)
+            url = path
         } else if let id = id {
-            url = LibraryPath.buildURL(withPath: "/books/\(id)")
+            url = "/books/\(id)"
         }
     }
 
@@ -92,6 +92,6 @@ public struct Book: BookProtocol, Codable {
         self.lastCheckedOutBy = lastCheckedOutBy
         self.publisher = publisher
         self.title = title
-        self.url = LibraryPath.buildURL(withPath: "/books/\(id ?? 0)")
+        self.url = "/books/\(id ?? 0)"
     }
 }

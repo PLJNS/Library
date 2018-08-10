@@ -7,6 +7,7 @@
 
 import LibraryService
 import LibrarySwiftExtensions
+import LibraryModel
 
 public extension BookProtocol {
     public static var random: Book {

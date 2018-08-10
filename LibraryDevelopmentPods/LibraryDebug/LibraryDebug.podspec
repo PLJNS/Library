@@ -13,4 +13,5 @@ Pod::Spec.new do |spec|
   spec.resources = 'Resources/*'
   spec.dependency 'LibrarySwiftExtensions'
   spec.dependency 'LibraryService'
+  spec.dependency 'LibraryModel'
 end

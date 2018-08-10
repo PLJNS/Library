@@ -1,0 +1,37 @@
+{
+  "name": "LibraryModel",
+  "version": "1.0.0",
+  "license": {
+    "type": "MIT"
+  },
+  "homepage": "https://code.sephora.com/projects/CI/repos/coloriq_castapp/browse",
+  "authors": {
+    "Prolific Interactive": "info@prolificinteractive.com"
+  },
+  "summary": "Theme for Sephora apps.",
+  "source": {
+    "git": "",
+    "tag": "1.0.0"
+  },
+  "module_name": "LibraryModel",
+  "source_files": "Sources/*",
+  "public_header_files": "Sources/LibraryModel.h",
+  "prefix_header_file": "Sources/LibraryModel-PrefixHeader.pch",
+  "resources": [
+    "Resources/Fonts/*.ttf",
+    "Resources/*.xcassets",
+    "Resources/Strings/*.lproj",
+    "Resources/*.json"
+  ],
+  "dependencies": {
+    "SwiftGen": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

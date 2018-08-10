@@ -7,6 +7,7 @@
 
 import Foundation
 import LibraryService
+import LibraryModel
 
 public class DebugLibraryService: LibraryService {
     private var books: [Book] = []
