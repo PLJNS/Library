@@ -10,12 +10,8 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = '10.0'
   spec.osx.deployment_target  = '10.10'
   spec.source_files       = 'Sources/*'
-  
   spec.public_header_files = 'Sources/LibraryResources.h'
-  
   spec.prefix_header_file = 'Sources/LibraryResources-PrefixHeader.pch'
-
   spec.resources = 'Resources/Fonts/*.ttf', 'Resources/*.xcassets', 'Resources/Strings/*.lproj', 'Resources/*.json'
-
   spec.dependency 'SwiftGen'
 end
