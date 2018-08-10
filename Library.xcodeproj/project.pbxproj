@@ -10,7 +10,6 @@
 		2732B80520895145009576E3 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80420895145009576E3 /* BookTests.swift */; };
 		2732B80F208A6246009576E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2732B80E208A6246009576E3 /* Settings.bundle */; };
 		2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */; };
-		2732B827208AB9A5009576E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732B829208AB9A5009576E3 /* Localizable.strings */; };
 		2732B830208ABD09009576E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732B82E208ABD09009576E3 /* InfoPlist.strings */; };
 		27483C5F2088285700EC1853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27483C5E2088285700EC1853 /* AppDelegate.swift */; };
 		27483C642088285700EC1853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27483C622088285700EC1853 /* Main.storyboard */; };
@@ -42,8 +41,6 @@
 		2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		2732B825208AB82C009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		2732B826208AB82C009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		2732B828208AB9A5009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2732B82A208AB9B4009576E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2732B82F208ABD09009576E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27483C5B2088285700EC1853 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27483C5E2088285700EC1853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 				27483C652088285800EC1853 /* Assets.xcassets */,
 				2732B80E208A6246009576E3 /* Settings.bundle */,
 				2732B82E208ABD09009576E3 /* InfoPlist.strings */,
-				2732B829208AB9A5009576E3 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +175,7 @@
 			buildConfigurationList = 27483C782088285900EC1853 /* Build configuration list for PBXNativeTarget "Library" */;
 			buildPhases = (
 				5D934D489CCB49AD8D86C485 /* [CP] Check Pods Manifest.lock */,
+				276EBAD8211D2462007581EC /* ShellScript */,
 				27483C572088285700EC1853 /* Sources */,
 				27483C582088285700EC1853 /* Frameworks */,
 				27483C592088285700EC1853 /* Resources */,
@@ -260,7 +257,6 @@
 				2732B830208ABD09009576E3 /* InfoPlist.strings in Resources */,
 				27483C692088285800EC1853 /* LaunchScreen.storyboard in Resources */,
 				27483C662088285800EC1853 /* Assets.xcassets in Resources */,
-				2732B827208AB9A5009576E3 /* Localizable.strings in Resources */,
 				27483C642088285700EC1853 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +271,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		276EBAD8211D2462007581EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\" config run --config LibraryDevelopmentPods/LibraryResources/Sources/config.yml";
+		};
 		5D934D489CCB49AD8D86C485 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,8 +330,10 @@
 				"${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework",
+				"${BUILT_PRODUCTS_DIR}/LibraryResources/LibraryResources.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework",
 				"${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions/LibrarySwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/LibraryTheme/LibraryTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -330,8 +341,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryDebug.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryResources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryService.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibrarySwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LibraryUIKitExtensions.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,15 +388,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2732B829208AB9A5009576E3 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2732B828208AB9A5009576E3 /* fr */,
-				2732B82A208AB9B4009576E3 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		2732B82E208ABD09009576E3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

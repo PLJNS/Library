@@ -6,7 +6,9 @@ target 'Library' do
   use_frameworks!
 
   pod 'LibrarySwiftExtensions', :path => './LibraryDevelopmentPods/LibrarySwiftExtensions/'
+  pod 'LibraryTheme', :path => './LibraryDevelopmentPods/LibraryTheme/'
   pod 'LibraryUIKitExtensions', :path => './LibraryDevelopmentPods/LibraryUIKitExtensions/'
+  pod 'LibraryResources', :path => './LibraryDevelopmentPods/LibraryResources/'
   pod 'EasyLoader', :path => './LibraryDevelopmentPods/EasyLoader/'
   pod 'LibraryService', :path => './LibraryDevelopmentPods/LibraryService/'
   pod 'LibraryDebug', :path => './LibraryDevelopmentPods/LibraryDebug/'

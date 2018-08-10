@@ -1,0 +1,35 @@
+/* 
+  en.strings
+  Pods
+
+  Created by Paul Jones on 8/5/18.
+  
+*/
+
+"ADD_TITLE" = "S'il vous plaît ajouter un titre.";
+
+"ADD_AUTHOR" = "S'il vous plaît ajouter un auteur.";
+
+"ADD_PUBLISHER" = "S'il vous plaît ajouter un éditeur.";
+
+"ADD_CATEGORIES" = "S'il vous plaît ajouter une catégorie.";
+
+"UNRECOVERABLE_ERROR" = "Erreur irrécupérable. Panique.";
+
+"ARE_YOU_SURE" = "Êtes-vous sûr?";
+
+"UNSAVED_CHANGES_WILL_BE_LOST" = "Tout changement non enregistré sera perdu.";
+
+"OK" = "D'accord";
+
+"CANCEL" = "Annuler";
+//
+"NAME_ALERT_TITLE" = "Vous avez trouvé un livre!";
+
+"NAME_ALERT_BODY" = "Quel nom utilisez-vous pour passer votre commande?";
+
+"EXAMPLE_NAME" = "Pierre Escargot";
+
+"CONFIRM" = "Confirmer";
+
+"ERROR" = "Erreur";

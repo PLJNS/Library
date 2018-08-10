@@ -146,16 +146,20 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryResources/LibraryResources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions/LibrarySwiftExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryTheme/LibraryTheme.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CodableClient/CodableClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EasyLoader/EasyLoader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryDebug/LibraryDebug.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryResources/LibraryResources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryService/LibraryService.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibrarySwiftExtensions/LibrarySwiftExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LibraryTheme/LibraryTheme.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LibraryUIKitExtensions/LibraryUIKitExtensions.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

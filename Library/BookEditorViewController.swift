@@ -8,7 +8,7 @@
 
 import UIKit
 import LibraryService
-
+import LibraryResources
 
 protocol BookEditorViewControllerDelegate: class {
     func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?)
@@ -98,9 +98,9 @@ class BookEditorViewController: UITableViewController {
     }
 
     private func attemptToSubmit(completion: @escaping (Book?, Swift.Error?) -> ()) {
-        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a title.", comment: ""))); return }
-        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add an author.", comment: ""))); return }
-        guard let theBook = book else { completion(nil, Error(reason: NSLocalizedString("Unrecoverable error. Panic.", comment: ""))); return }
+        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: L10n.addTitle)); return }
+        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: L10n.addAuthor)); return }
+        guard let theBook = book else { completion(nil, Error(reason: L10n.unrecoverableError)); return }
 
         let processId = showLoading()
         switch mode {
@@ -139,10 +139,10 @@ class BookEditorViewController: UITableViewController {
             }
         case cancelBarButtonItem:
             if somethingChanged {
-                let alertController = UIAlertController.confirmationAlertController(withTitle: NSLocalizedString("Are you sure?", comment: ""),
-                                                                                    message: NSLocalizedString("Any unsaved changes will be lost.", comment: ""),
-                                                                                    confirmationActionTitle: NSLocalizedString("OK", comment: ""),
-                                                                                    cancelActionTitle: NSLocalizedString("Cancel", comment: ""),
+                let alertController = UIAlertController.confirmationAlertController(withTitle: L10n.areYouSure,
+                                                                                    message: L10n.unsavedChangesWillBeLost,
+                                                                                    confirmationActionTitle: L10n.ok,
+                                                                                    cancelActionTitle: L10n.cancel,
                                                                                     with: { [weak self] (confirmed) in
                                                                                         guard let strongSelf = self else { return }
                                                                                         if confirmed {
