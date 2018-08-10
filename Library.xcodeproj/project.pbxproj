@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27319BF0211D3DEF004BB816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319BEF211D3DEF004BB816 /* AppDelegate.swift */; };
-		27319BF2211D3DEF004BB816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319BF1211D3DEF004BB816 /* ViewController.swift */; };
-		27319BF4211D3DF1004BB816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27319BF3211D3DF1004BB816 /* Assets.xcassets */; };
-		27319BF7211D3DF1004BB816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27319BF5211D3DF1004BB816 /* Main.storyboard */; };
-		27319C03211D3DF1004BB816 /* Library_for_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27319C02211D3DF1004BB816 /* Library_for_MacTests.swift */; };
 		2732B80520895145009576E3 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B80420895145009576E3 /* BookTests.swift */; };
 		2732B80F208A6246009576E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2732B80E208A6246009576E3 /* Settings.bundle */; };
 		2732B811208A628E009576E3 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */; };
@@ -26,18 +21,10 @@
 		27B47CF5208918D900787334 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CF4208918D900787334 /* BookDetailViewController.swift */; };
 		27B47D0020894B6C00787334 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B47CFF20894B6C00787334 /* PrimarySplitViewController.swift */; };
 		386DA90C7BF2FD4C45B88CE2 /* Pods_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3D40C3B1A855E73C7C66D7 /* Pods_Library.framework */; };
-		AA4188B1191B507484EF62C3 /* libPods-Library for Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A0292E89F3B7EAC2E268B1 /* libPods-Library for Mac.a */; };
 		F03D22CA660535D964CA4111 /* Pods_LibraryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B35AC1DFB330E85CB806C59 /* Pods_LibraryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		27319BFF211D3DF1004BB816 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27483C532088285700EC1853 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 27319BEC211D3DEF004BB816;
-			remoteInfo = "Library for Mac";
-		};
 		27483C702088285800EC1853 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27483C532088285700EC1853 /* Project object */;
@@ -50,17 +37,6 @@
 /* Begin PBXFileReference section */
 		075F1F6F3115FE1205163D8A /* Pods-Library for Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library for Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library for Mac/Pods-Library for Mac.release.xcconfig"; sourceTree = "<group>"; };
 		117B39D1B8FF681F7CD5492E /* Pods-Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Library/Pods-Library.release.xcconfig"; sourceTree = "<group>"; };
-		27319BED211D3DEF004BB816 /* Library for Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Library for Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27319BEF211D3DEF004BB816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27319BF1211D3DEF004BB816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27319BF3211D3DF1004BB816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27319BF6211D3DF1004BB816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27319BF8211D3DF1004BB816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27319BF9211D3DF1004BB816 /* Library_for_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Library_for_Mac.entitlements; sourceTree = "<group>"; };
-		27319BFE211D3DF1004BB816 /* Library for MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Library for MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27319C02211D3DF1004BB816 /* Library_for_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library_for_MacTests.swift; sourceTree = "<group>"; };
-		27319C04211D3DF1004BB816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27319C0B211D42BD004BB816 /* Library for Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Library for Mac.entitlements"; sourceTree = "<group>"; };
 		2732B80420895145009576E3 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		2732B80E208A6246009576E3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2732B810208A628E009576E3 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -90,21 +66,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		27319BEA211D3DEF004BB816 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA4188B1191B507484EF62C3 /* libPods-Library for Mac.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27319BFB211D3DF1004BB816 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		27483C582088285700EC1853 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,29 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27319BEE211D3DEF004BB816 /* Library for Mac */ = {
-			isa = PBXGroup;
-			children = (
-				27319C0B211D42BD004BB816 /* Library for Mac.entitlements */,
-				27319BEF211D3DEF004BB816 /* AppDelegate.swift */,
-				27319BF1211D3DEF004BB816 /* ViewController.swift */,
-				27319BF3211D3DF1004BB816 /* Assets.xcassets */,
-				27319BF5211D3DF1004BB816 /* Main.storyboard */,
-				27319BF8211D3DF1004BB816 /* Info.plist */,
-				27319BF9211D3DF1004BB816 /* Library_for_Mac.entitlements */,
-			);
-			path = "Library for Mac";
-			sourceTree = "<group>";
-		};
-		27319C01211D3DF1004BB816 /* Library for MacTests */ = {
-			isa = PBXGroup;
-			children = (
-				27319C02211D3DF1004BB816 /* Library_for_MacTests.swift */,
-				27319C04211D3DF1004BB816 /* Info.plist */,
-			);
-			path = "Library for MacTests";
-			sourceTree = "<group>";
-		};
 		2732B822208AB5C2009576E3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +109,6 @@
 			children = (
 				27483C5D2088285700EC1853 /* Library */,
 				27483C722088285800EC1853 /* LibraryTests */,
-				27319BEE211D3DEF004BB816 /* Library for Mac */,
-				27319C01211D3DF1004BB816 /* Library for MacTests */,
 				27483C5C2088285700EC1853 /* Products */,
 				F5DF8E592824E6F11344B65A /* Pods */,
 				458F303B9006B5C47BD1982D /* Frameworks */,
@@ -184,8 +120,6 @@
 			children = (
 				27483C5B2088285700EC1853 /* Library.app */,
 				27483C6F2088285800EC1853 /* LibraryTests.xctest */,
-				27319BED211D3DEF004BB816 /* Library for Mac.app */,
-				27319BFE211D3DF1004BB816 /* Library for MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,43 +176,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27319BEC211D3DEF004BB816 /* Library for Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27319C09211D3DF1004BB816 /* Build configuration list for PBXNativeTarget "Library for Mac" */;
-			buildPhases = (
-				864B4E4EC626C1E2E6E0C55E /* [CP] Check Pods Manifest.lock */,
-				27319BE9211D3DEF004BB816 /* Sources */,
-				27319BEA211D3DEF004BB816 /* Frameworks */,
-				27319BEB211D3DEF004BB816 /* Resources */,
-				350F0C74376EB235875EF8B9 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Library for Mac";
-			productName = "Library for Mac";
-			productReference = 27319BED211D3DEF004BB816 /* Library for Mac.app */;
-			productType = "com.apple.product-type.application";
-		};
-		27319BFD211D3DF1004BB816 /* Library for MacTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27319C0A211D3DF1004BB816 /* Build configuration list for PBXNativeTarget "Library for MacTests" */;
-			buildPhases = (
-				27319BFA211D3DF1004BB816 /* Sources */,
-				27319BFB211D3DF1004BB816 /* Frameworks */,
-				27319BFC211D3DF1004BB816 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27319C00211D3DF1004BB816 /* PBXTargetDependency */,
-			);
-			name = "Library for MacTests";
-			productName = "Library for MacTests";
-			productReference = 27319BFE211D3DF1004BB816 /* Library for MacTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		27483C5A2088285700EC1853 /* Library */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27483C782088285900EC1853 /* Build configuration list for PBXNativeTarget "Library" */;
@@ -328,18 +225,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = PLJNS;
 				TargetAttributes = {
-					27319BEC211D3DEF004BB816 = {
-						CreatedOnToolsVersion = 9.4.1;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
-					};
-					27319BFD211D3DF1004BB816 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 27319BEC211D3DEF004BB816;
-					};
 					27483C5A2088285700EC1853 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -365,29 +250,11 @@
 			targets = (
 				27483C5A2088285700EC1853 /* Library */,
 				27483C6E2088285800EC1853 /* LibraryTests */,
-				27319BEC211D3DEF004BB816 /* Library for Mac */,
-				27319BFD211D3DF1004BB816 /* Library for MacTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27319BEB211D3DEF004BB816 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27319BF4211D3DF1004BB816 /* Assets.xcassets in Resources */,
-				27319BF7211D3DF1004BB816 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27319BFC211D3DF1004BB816 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		27483C592088285700EC1853 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,74 +290,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\" config run --config LibraryDevelopmentPods/LibraryResources/Sources/config.yml";
 		};
-		350F0C74376EB235875EF8B9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Library for Mac/Pods-Library for Mac-resources.sh",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Black.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Bold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-ExtraLight.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Light.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Medium.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Regular.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceCodePro-Semibold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-Black.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-BlackItalic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-Bold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-BoldItalic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-ExtraLight.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-ExtraLightItalic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-Italic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-Light.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-LightItalic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-Regular.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-SemiBold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSansPro-SemiBoldItalic.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSerifPro-Bold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSerifPro-Regular.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Fonts/SourceSerifPro-Semibold.ttf",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Images.xcassets",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Strings/en.lproj",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Strings/fr.lproj",
-				"${PODS_ROOT}/../LibraryDevelopmentPods/LibraryResources/Resources/Colors.json",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Black.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Bold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-ExtraLight.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Light.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Medium.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceCodePro-Semibold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Black.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-BlackItalic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Bold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-BoldItalic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-ExtraLight.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-ExtraLightItalic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Italic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Light.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-LightItalic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-SemiBold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-SemiBoldItalic.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSerifPro-Bold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSerifPro-Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSerifPro-Semibold.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fr.lproj",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Colors.json",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Library for Mac/Pods-Library for Mac-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5D934D489CCB49AD8D86C485 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,24 +302,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Library-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		864B4E4EC626C1E2E6E0C55E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Library for Mac-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -582,23 +363,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27319BE9211D3DEF004BB816 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27319BF2211D3DEF004BB816 /* ViewController.swift in Sources */,
-				27319BF0211D3DEF004BB816 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27319BFA211D3DF1004BB816 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27319C03211D3DF1004BB816 /* Library_for_MacTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		27483C572088285700EC1853 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,11 +388,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		27319C00211D3DF1004BB816 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 27319BEC211D3DEF004BB816 /* Library for Mac */;
-			targetProxy = 27319BFF211D3DF1004BB816 /* PBXContainerItemProxy */;
-		};
 		27483C712088285800EC1853 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27483C5A2088285700EC1853 /* Library */;
@@ -637,14 +396,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		27319BF5211D3DF1004BB816 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27319BF6211D3DF1004BB816 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2732B82E208ABD09009576E3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -674,100 +425,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		27319C05211D3DF1004BB816 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F35BC6F7DAEAFB42C36D431A /* Pods-Library for Mac.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Library for Mac/Library for Mac.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QF6RL3879H;
-				INFOPLIST_FILE = "Library for Mac/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pljns.Library-for-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		27319C06211D3DF1004BB816 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 075F1F6F3115FE1205163D8A /* Pods-Library for Mac.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Library for Mac/Library for Mac.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QF6RL3879H;
-				INFOPLIST_FILE = "Library for Mac/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pljns.Library-for-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		27319C07211D3DF1004BB816 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QF6RL3879H;
-				INFOPLIST_FILE = "Library for MacTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pljns.Library-for-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Library for Mac.app/Contents/MacOS/Library for Mac";
-			};
-			name = Debug;
-		};
-		27319C08211D3DF1004BB816 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QF6RL3879H;
-				INFOPLIST_FILE = "Library for MacTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pljns.Library-for-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Library for Mac.app/Contents/MacOS/Library for Mac";
-			};
-			name = Release;
-		};
 		27483C762088285900EC1853 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -971,24 +628,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27319C09211D3DF1004BB816 /* Build configuration list for PBXNativeTarget "Library for Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27319C05211D3DF1004BB816 /* Debug */,
-				27319C06211D3DF1004BB816 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27319C0A211D3DF1004BB816 /* Build configuration list for PBXNativeTarget "Library for MacTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27319C07211D3DF1004BB816 /* Debug */,
-				27319C08211D3DF1004BB816 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		27483C562088285700EC1853 /* Build configuration list for PBXProject "Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
