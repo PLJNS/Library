@@ -1,0 +1,6 @@
+
+#ifndef LibraryResources_PrefixHeader_pch
+#define LibraryResources_PrefixHeader_pch
+
+
+#endif /* LibraryResources_PrefixHeader_pch */
