@@ -8,6 +8,7 @@
 
 import UIKit
 import LibrarySwiftExtensions
+import LibraryResources
 
 protocol BookEditorViewControllerDelegate: class {
     func bookEditorViewController(viewController: BookEditorViewController, didUpdateBook book: Book?)
@@ -97,9 +98,9 @@ class BookEditorViewController: UITableViewController {
     }
 
     private func attemptToSubmit(completion: @escaping (Book?, Swift.Error?) -> ()) {
-        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add a title.", comment: ""))); return }
-        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: NSLocalizedString("Please add an author.", comment: ""))); return }
-        guard let theBook = book else { completion(nil, Error(reason: NSLocalizedString("Unrecoverable error. Panic.", comment: ""))); return }
+        guard let _ = titleTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: L10n.addTitle)); return }
+        guard let _ = authorTextField?.text?.nilIfEmpty else { completion(nil, Error(reason: L10n.addAuthor)); return }
+        guard let theBook = book else { completion(nil, Error(reason: L10n.unrecoverableError)); return }
 
         let processId = showLoading()
         switch mode {

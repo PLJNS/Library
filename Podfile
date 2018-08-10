@@ -7,6 +7,7 @@ platform :ios, '10.0'
 
   pod 'EasyLoader', :path => './LibraryDevelopmentPods/EasyLoader/'
   pod 'LibrarySwiftExtensions', :path => './LibraryDevelopmentPods/LibrarySwiftExtensions/'
+  pod 'LibraryResources', :path => './LibraryDevelopmentPods/LibraryResources/'
 
   target 'LibraryTests' do
     inherit! :search_paths

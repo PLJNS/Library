@@ -1,21 +1,33 @@
 PODS:
   - EasyLoader (1.0.0)
+  - LibraryResources (1.0.0):
+    - SwiftGen
   - LibrarySwiftExtensions (1.0.0)
+  - SwiftGen (5.3.0)
 
 DEPENDENCIES:
   - EasyLoader (from `./LibraryDevelopmentPods/EasyLoader/`)
+  - LibraryResources (from `./LibraryDevelopmentPods/LibraryResources/`)
   - LibrarySwiftExtensions (from `./LibraryDevelopmentPods/LibrarySwiftExtensions/`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftGen
 
 EXTERNAL SOURCES:
   EasyLoader:
     :path: "./LibraryDevelopmentPods/EasyLoader/"
+  LibraryResources:
+    :path: "./LibraryDevelopmentPods/LibraryResources/"
   LibrarySwiftExtensions:
     :path: "./LibraryDevelopmentPods/LibrarySwiftExtensions/"
 
 SPEC CHECKSUMS:
   EasyLoader: 82204affbf7adad06b89fbedb812abe3618ee4ff
+  LibraryResources: 1865129d229670346ef7e0fa93cf16738e8ee23d
   LibrarySwiftExtensions: be83712102b83758e02ca6bdf85d4a71d0b7c8a3
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: 916b6c2026e89ebd193d104411de29d00f15f64a
+PODFILE CHECKSUM: 5710b97dfe216fb1783f9db12d63fb0460834c32
 
 COCOAPODS: 1.5.3
