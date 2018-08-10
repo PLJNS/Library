@@ -1,0 +1,36 @@
+/* 
+  File.strings
+  Library
+
+  Created by Paul Jones on 8/10/18.
+  Copyright © 2018 PLJNS. All rights reserved.
+*/
+
+
+"ADD_TITLE" = "Please add a title.";
+
+"ADD_AUTHOR" = "Please add an author.";
+
+"ADD_PUBLISHER" = "Please add a publisher.";
+
+"ADD_CATEGORIES" = "Please add categories.";
+
+"UNRECOVERABLE_ERROR" = "Unrecoverable error. Panic.";
+
+"ARE_YOU_SURE" = "Are you sure?";
+
+"UNSAVED_CHANGES_WILL_BE_LOST" = "Any unsaved changes will be lost.";
+
+"OK" = "OK";
+
+"CANCEL" = "Cancel";
+
+"NAME_ALERT_TITLE" = "You found a book!";
+
+"NAME_ALERT_BODY" = "What name are you using to checkout with?";
+
+"EXAMPLE_NAME" = "John Doe";
+
+"CONFIRM" = "Confirm";
+
+"ERROR" = "Error";
