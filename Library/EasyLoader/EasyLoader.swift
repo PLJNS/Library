@@ -7,8 +7,8 @@
 
 import UIKit
 
-public extension UIViewController {
-    public func showLoading(style: UIActivityIndicatorViewStyle = .gray) -> Int {
+extension UIViewController {
+    func showLoading(style: UIActivityIndicatorViewStyle = .gray) -> Int {
         let processId = Int.random
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: style)
         activityIndicatorView.hidesWhenStopped = true
@@ -27,7 +27,7 @@ public extension UIViewController {
         return processId
     }
 
-    public func hideLoading(procesId: Int) {
+    func hideLoading(procesId: Int) {
         view.isUserInteractionEnabled = true
         if let activityIndicatorView = view.viewWithTag(procesId) {
             UIView.animate(withDuration: 0.25, animations: {
