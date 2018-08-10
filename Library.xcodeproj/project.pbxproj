@@ -66,7 +66,6 @@
 		27319C7A211D45A5004BB816 /* URLConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
 		27319C7B211D45A5004BB816 /* CodableClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableClient.swift; sourceTree = "<group>"; };
 		27319C7C211D45A5004BB816 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		27319C7D211D45A5004BB816 /* CodableClient-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CodableClient-PrefixHeader.pch"; sourceTree = "<group>"; };
 		27319C80211D45A5004BB816 /* EasyLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyLoader.swift; sourceTree = "<group>"; };
 		27319C84211D45A5004BB816 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		27319C85211D45A5004BB816 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +146,6 @@
 				27319C7A211D45A5004BB816 /* URLConvertible.swift */,
 				27319C7B211D45A5004BB816 /* CodableClient.swift */,
 				27319C7C211D45A5004BB816 /* HTTPMethod.swift */,
-				27319C7D211D45A5004BB816 /* CodableClient-PrefixHeader.pch */,
 			);
 			path = CodableClient;
 			sourceTree = "<group>";
@@ -257,6 +255,7 @@
 				27319C88211D45A5004BB816 /* Model */,
 				27319C8D211D45A5004BB816 /* Service */,
 				27319C73211D45A5004BB816 /* Swift Extensions */,
+				275C5419211DFA57000DE585 /* Assets */,
 				27319C90211D45A5004BB816 /* UIKitExtensions */,
 				27319C98211D45A5004BB816 /* Debug */,
 				2732B834208ABE14009576E3 /* Resources */,
@@ -272,6 +271,13 @@
 				27483C752088285900EC1853 /* Info.plist */,
 			);
 			path = LibraryTests;
+			sourceTree = "<group>";
+		};
+		275C5419211DFA57000DE585 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		458F303B9006B5C47BD1982D /* Frameworks */ = {
